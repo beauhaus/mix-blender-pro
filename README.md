@@ -1,5 +1,5 @@
 # mix-blender-pro
 
-![readme test image](https://github.com/beauhaus/mix-blender-pro/blob/master/readme-images/srn1.png?raw=true "readme test image")
-
+<img src="https://github.com/beauhaus/mix-blender-pro/blob/master/readme-images/scrn1.png?raw=true" alt="readme test image"
+	title="readme test image" width="20%" />
 First functioning prototype of CSS Blendr
