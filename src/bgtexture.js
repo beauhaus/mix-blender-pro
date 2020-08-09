@@ -12,7 +12,7 @@ const NoiseBGWrap = styled.div`
   height: 100vh;
   overflow: hidden;
   image {
-    height: 25%;
+    height: 50%;
     filter: url(#bg-img-blur-filter);
   }
   #gradient-overlay {
@@ -21,29 +21,29 @@ const NoiseBGWrap = styled.div`
   }
 `
 
+
 const NoiseBG = () => {
   const data = useStaticQuery(graphql`
-  {
+ {
   file: allFile(filter: {sourceInstanceName: {eq: "util-images"}, name: {eq: "bgnoise"}}) {
-    nodes {
-      sharp: childImageSharp {
-        fluid {
-          base64
+    edges {
+      node {
+       sharp: childImageSharp {
+          fluid(base64Width: 300) {
+            base64
+          }
         }
       }
     }
   }
 }
-`)
+`);
 
-const NoiseImg = data.file.nodes[0].sharp;
+const NoiseImg = data.file.edges[0].node.sharp.fluid.base64;
 
-// console.log("img: ", data)
 
   return (
     <NoiseBGWrap className="noise-bg">
-{    console.log("img: ", data.file.nodes[0].sharp.fluid.base64)}
-
       <svg width="100%" viewBox="0 0 500 1000" preserveAspectRatio="none">
         <filter id="bg-img-blur-filter">
           <feGaussianBlur
