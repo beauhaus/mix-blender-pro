@@ -10,6 +10,7 @@ const NoiseBGWrap = styled.svg`
   width: 110vw;
   height: 100vh;
   overflow: hidden;
+  z-index: -1;
 
   image {
     height: 50%;

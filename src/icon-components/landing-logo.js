@@ -4,9 +4,9 @@ import styled from "styled-components"
 const LandingLogoWrapper = styled.svg`
   position: absolute;
   width: 115%;
-  top: 0;
+  top: 10vh;
   left: -50%;
-  mix-blend-mode: luminosity;
+  mix-blend-mode: overlay;
 
   .st3 {
     fill: none;

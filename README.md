@@ -27,12 +27,6 @@ First functioning prototype of CSS Blendr (3 weeks)
 
 "gatsby-plugin-react-helmet": "^3.3.0"
 
-"gatsby-plugin-sharp": "^2.6.10"
-
-"gatsby-source-filesystem": "^2.3.0"
-
-"gatsby-transformer-sharp": "^2.5.4"
-
 "gsap": "^3.2.6"
 
 "react-helmet": "^6.0.0"
@@ -48,8 +42,6 @@ First functioning prototype of CSS Blendr (3 weeks)
 "typeface-fugaz-one": "0.0.72"
 
 "typeface-iceland": "0.0.72"
-
-"typeface-rajdhani": "0.0.72"
 
 ---
 

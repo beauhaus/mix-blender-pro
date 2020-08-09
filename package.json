@@ -28,7 +28,11 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "styled-components": "^5.1.1",
-    "typeface-rajdhani": "0.0.72"
+    "typeface-nanum-pen-script": "0.0.63",
+    "typeface-oleo-script-swash-caps": "0.0.72",
+    "typeface-rajdhani": "0.0.72",
+    "typeface-seaweed-script": "0.0.72",
+    "typeface-warnes": "0.0.71"
   },
   "devDependencies": {
     "prettier": "2.0.5"

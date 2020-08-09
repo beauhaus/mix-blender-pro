@@ -1,19 +1,14 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
-  plugins: ["gatsby-transformer-sharp", 
-  "gatsby-plugin-sharp",
-  {
-    resolve: "gatsby-source-filesystem",
-    options: {
-      name: "util-images",
-      path: "util-images",
+  plugins: [
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
+    "gatsby-plugin-sass",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "util-images",
+        path: "util-images",
+      },
     },
-  },],
-
+  ],
 }
