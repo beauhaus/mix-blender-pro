@@ -17,19 +17,13 @@ First functioning prototype of CSS Blendr (3 weeks)
 
 "dot-prop": "^5.2.0"
 
-"gatsby": "^2.3.25"
-
-"gatsby-background-image": "^1.1.1"
-
-"gatsby-image": "^2.4.5"
+"gatsby-background-image": "^1.1.1" \*NOT USED
 
 "gatsby-plugin-layout": "^1.0.14"
 
 "gatsby-plugin-manifest": "^2.4.9"
 
 "gatsby-plugin-mdx": "^1.2.4"
-
-"gatsby-plugin-netlify": "^2.3.11"
 
 "gatsby-plugin-react-helmet": "^3.3.0"
 
@@ -40,10 +34,6 @@ First functioning prototype of CSS Blendr (3 weeks)
 "gatsby-transformer-sharp": "^2.5.4"
 
 "gsap": "^3.2.6"
-
-"react": "^16.8.6"
-
-"react-dom": "^16.8.6"
 
 "react-helmet": "^6.0.0"
 
@@ -63,19 +53,6 @@ First functioning prototype of CSS Blendr (3 weeks)
 
 ---
 
+for future ref getting \_withWebP
 
-for future ref  getting _withWebP
-
- const data = useStaticQuery(graphql`
-  {
-  file: allFile(filter: {sourceInstanceName: {eq: "util-images"}, name: {eq: "bgnoise"}}) {
-    nodes {
-      sharp: childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-}
-`)
+const data = useStaticQuery(graphql`{ file: allFile(filter: {sourceInstanceName: {eq: "util-images"}, name: {eq: "bgnoise"}}) { nodes { sharp: childImageSharp { fluid { ...GatsbyImageSharpFluid_withWebp } } } } }`)

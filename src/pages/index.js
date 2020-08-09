@@ -3,7 +3,7 @@ import styled from "styled-components"
 import "normalize.css"
 
 import "typeface-rajdhani"
-import BGTexture from "../bgtexture"
+import BGTexture from "../components/presentational/bg-texture"
 import LandingLogo from "../icon-components/landing-logo"
 
 const StyledIdxPage = styled.main`
