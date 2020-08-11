@@ -2,23 +2,32 @@ import React from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 
-const NoiseBGWrap = styled.svg`
-  position: absolute;
-  top: 0;
-  left: -5vw;
-  bottom: 0;
-  width: 110vw;
+const NoiseBGWrap = styled.div`
+  width: 100vw;
   height: 100vh;
-  overflow: hidden;
-  z-index: -1;
-
-  image {
-    height: 50%;
-    filter: url(#bg-img-blur-filter);
-  }
-  #gradient-overlay {
-    mix-blend-mode: soft-light;
+  height: auto;
+  overflowx: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  svg {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
     opacity: 1;
+
+    .gradient-overlay {
+      mix-blend-mode: screen;
+      opacity: 0.4;
+    }
+    #top {
+      mix-blend-mode: soft-light;
+    }
+    rect {
+      filter: url(#a);
+    }
   }
 `
 
@@ -28,13 +37,13 @@ const NoiseBG = () => {
       file: allFile(
         filter: {
           sourceInstanceName: { eq: "util-images" }
-          name: { eq: "bgnoise" }
+          name: { eq: "orange-overlay-noise" }
         }
       ) {
         edges {
           node {
             sharp: childImageSharp {
-              fluid(base64Width: 300) {
+              fluid(base64Width: 400) {
                 base64
               }
             }
@@ -47,67 +56,78 @@ const NoiseBG = () => {
   const NoiseImg = data.file.edges[0].node.sharp.fluid.base64
 
   return (
-    <NoiseBGWrap
-      className="bg-texture"
-      width="100%"
-      viewBox="0 0 500 1000"
-      preserveAspectRatio="none"
-    >
-      <filter id="bg-img-blur-filter">
-        <feGaussianBlur stdDeviation="35 0" colorInterpolationFilters="sRGB" />
-      </filter>
-      <image
-        y="0"
-        id="bg-img-a"
-        xlinkHref={NoiseImg}
+    <NoiseBGWrap className="noise-bg-container">
+      <svg
         width="100%"
-        height="100%"
+        className="bg-texture"
+        viewBox="0 0 500 1000"
         preserveAspectRatio="none"
-      />
-      <image
-        y="250"
-        id="bg-img-b"
-        xlinkHref={NoiseImg}
-        width="100%"
-        height="100%"
-        preserveAspectRatio="none"
-      />
-      <image
-        y="500"
-        id="bg-img-c"
-        xlinkHref={NoiseImg}
-        width="100%"
-        height="100%"
-        preserveAspectRatio="none"
-      />
-      <image
-        y="750"
-        id="bg-img-d"
-        xlinkHref={NoiseImg}
-        width="100%"
-        height="100%"
-        preserveAspectRatio="none"
-      />
-
-      <radialGradient
-        id="reflection-grad"
-        cx="-6"
-        cy="-8"
-        r="780"
-        gradientTransform="matrix(.4348 .9005 -.4308 .208 -6.8376 -.9329)"
-        gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stopColor="#fff" stopOpacity="0.3" />
-        <stop offset="1" stopColor="#313d5c" stopOpacity="1" />
-      </radialGradient>
-      <rect
-        id="gradient-overlay"
-        x="0"
-        y="0"
-        height="100%"
-        width="100%"
-        fill="url(#reflection-grad)"
-      />
+        <defs>
+          <filter
+            id="a"
+            colorInterpolationFilters="sRGB"
+            width="120%"
+            height="120%"
+          >
+            <feTurbulence
+              result="result0"
+              seed="285"
+              baseFrequency="0.00021 1"
+              numOctaves="2"
+              type="fractalNoise"
+            />
+
+            <feComposite
+              result="result2"
+              k1=".72"
+              k2=".90"
+              k3=".06"
+              k4="-.05"
+              operator="arithmetic"
+              in="SourceGraphic"
+            />
+          </filter>
+        </defs>
+
+        <rect
+          y="0"
+          x="0"
+          width="100%"
+          height="100%"
+          fill="var(--bg-texture)"
+          filter="url(#a)"
+        />
+        <rect
+          id="top"
+          y="0"
+          x="0"
+          width="100%"
+          height="100%"
+          fill="#cd9240"
+          filter="url(#a)"
+        />
+
+        <linearGradient
+          id="reflection-grad"
+          gradientUnits="userSpaceOnUse"
+          x1="0"
+          y1="500"
+          x2="500"
+          y2="500"
+        >
+          <stop offset="0" stopColor="#000" />
+          <stop offset=".3" stopColor="#fff" stopOpacity="0.2" />
+          <stop offset=".8" stopColor="#fff" stopOpacity="0.6" />
+          <stop offset="1" stopColor="#000" stopOpacity="0.5" />
+        </linearGradient>
+        <rect
+          className="gradient-overlay"
+          width="500"
+          height="1000"
+          fill="url(#reflection-grad)"
+        />
+      </svg>
     </NoiseBGWrap>
   )
 }

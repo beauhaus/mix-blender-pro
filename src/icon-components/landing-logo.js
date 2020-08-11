@@ -6,7 +6,7 @@ const LandingLogoWrapper = styled.svg`
   width: 115%;
   top: 10vh;
   left: -50%;
-  mix-blend-mode: overlay;
+  ${"" /* mix-blend-mode: overlay; */}
 
   .st3 {
     fill: none;
