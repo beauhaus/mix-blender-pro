@@ -13,10 +13,10 @@ const NoiseBGWrap = styled.div`
   svg {
     position: relative;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     overflow: hidden;
     z-index: -1;
-    opacity: 1;
 
     .gradient-overlay {
       mix-blend-mode: screen;

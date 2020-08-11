@@ -1,0 +1,19 @@
+.page {
+  top: 0;
+  transition: opacity 1s;
+  overflow: hidden;
+  position: relative;
+  height: auto; // customized (remove if needed)
+}
+
+.page.entering,
+.page.entered {
+  position: relative;
+  opacity: 1;
+}
+
+.page.exiting,
+.page.exited {
+  position: absolute;
+  opacity: 0;
+}

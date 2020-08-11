@@ -10,5 +10,11 @@ module.exports = {
         path: "util-images",
       },
     },
+    {
+      resolve: "gatsby-plugin-layout",
+      options: {
+        component: require.resolve("./src/components/functional/layout.js"),
+      },
+    },
   ],
 }

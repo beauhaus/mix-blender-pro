@@ -19,25 +19,17 @@ First functioning prototype of CSS Blendr (3 weeks)
 
 "gatsby-background-image": "^1.1.1" \*NOT USED
 
-"gatsby-plugin-layout": "^1.0.14"
-
 "gatsby-plugin-manifest": "^2.4.9"
 
 "gatsby-plugin-mdx": "^1.2.4"
 
-"gatsby-plugin-react-helmet": "^3.3.0"
-
 "gsap": "^3.2.6"
-
-"react-helmet": "^6.0.0"
 
 "react-remove-scroll": "^2.3.0"
 
 "react-scroll": "^1.8.0"
 
 "react-slider": "^1.0.8"
-
-"react-transition-group": "^4.0.0"
 
 "typeface-fugaz-one": "0.0.72"
 

@@ -1,5 +1,8 @@
 import React from "react"
 import styled from "styled-components"
+import "typeface-nanum-pen-script"
+import "typeface-warnes"
+import "typeface-seaweed-script"
 
 const StyledLanding = styled.section`
   width: 100vw;

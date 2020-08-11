@@ -1,6 +1,7 @@
 import React, { useContext } from "react"
 import Link from "gatsby-link"
 import styled from "styled-components"
+import { NavContext } from "./layout"
 
 const StyledTopNav = styled.button`
   border-radius: 25%;
@@ -77,21 +78,51 @@ const StyledTopNav = styled.button`
       box-shadow: 0 0 8px 5px var(--btn-3-on);
     } */}
   }
+  &.blender-on a {
+    &::before {
+      content: "";
+      border-radius: 30%;
+      width: 9vh;
+      height: 9vh;
+      background-image: radial-gradient(
+        var(--btn-6-on) 0%,
+        var(--btn-5-on) 30%,
+        var(--btn-4-on) 30%,
+        var(--btn-3-on) 80%
+      );
+      position: absolute;
+      top: 0;
+      left: 0vh;
+      border-radius: 22%;
+      box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.4);
+    }
+    &::after {
+      content: "";
+      border-radius: 30%;
+      width: 9vh;
+      height: 9vh;
+      background: transparent;
+      filter: blur(8px);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 4;
+      box-shadow: 0 0 8px 5px var(--btn-3-on);
+    }
+  }
 `
 // import { NavContext } from "../layout";
 
 const TopNavBtn = () => {
-  // const { currentPath } = useContext(NavContext);
-  // const isHome = currentPath === "/"
-  const isHome = true //temp
+  const { currentPath } = useContext(NavContext)
+  const isHome = currentPath === "/"
+
   return (
     <StyledTopNav
       name={!isHome ? "blender-on" : "blender-off"}
-      className={!isHome ? "top-nav-btn btn-on" : "top-nav-btn btn-off"}
+      className={!isHome ? "top-nav-btn blender-on" : "top-nav-btn blender-off"}
     >
-      <Link to={!isHome ? "/" : "/application"}>
-        {!isHome ? "home" : "Application"}
-      </Link>
+      <Link to={!isHome ? "/" : "/panel"}>{!isHome ? "home" : "panel"}</Link>
     </StyledTopNav>
   )
 }
