@@ -49,7 +49,7 @@ const StyledTopNav = styled.button`
     box-shadow: inset 0px 0px 6px 2px rgba(0, 0, 0, 0.4),
       inset 0px 0px 1px 1px rgba(0, 0, 0, 0.4);
     color: transparent;
-    &::before {
+    ${"" /* &::before {
       content: "";
       border-radius: 30%;
       width: 9vh;
@@ -75,7 +75,7 @@ const StyledTopNav = styled.button`
       left: 0;
       z-index: 4;
       box-shadow: 0 0 8px 5px var(--btn-3-on);
-    }
+    } */}
   }
 `
 // import { NavContext } from "../layout";

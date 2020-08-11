@@ -7,7 +7,7 @@ const NoiseBGWrap = styled.div`
   height: 100vh;
   height: auto;
   overflowx: hidden;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   svg {
