@@ -1,6 +1,6 @@
 import React from "react"
 import "./header.scss"
-import TopNavBtn from "./topnavbtn"
+import PowerBtn from "./power-btn"
 import { graphql, useStaticQuery } from "gatsby"
 
 const Header = () => {
@@ -26,7 +26,7 @@ const Header = () => {
   // const blenderFavicon2 = data.file.nodes[0].image.fluid;
   return (
     <header className="header-wrapper">
-      <TopNavBtn />
+      <PowerBtn />
       {/* <img id="blender-fav2" alt="blender-mark" src={blenderFavicon2.base64} /> */}
     </header>
   )

@@ -1,4 +1,5 @@
-header.header-wrapper { /*TODO: remove class? */
+header.header-wrapper {
+  /*TODO: remove class? */
   // box-shadow: inset 0 0 0 1px #000;
   position: absolute;
   left: 0;
@@ -20,29 +21,8 @@ header.header-wrapper { /*TODO: remove class? */
     display: none;
   }
   // border: 1px solid #fff;
-  .home-link {
-    // border: 1px solid coral;
-    height: 10vh;
-    img {
-      width:10vh;
-      height: 10vh;
-    }
-  }
+
   #blender-fav2 {
     mix-blend-mode: color-burn;
-  }
-  a.b-link {
-    border: 1px solid #fff;
-    width: 20vw;
-    position: absolute;
-  right: 2vh;
-  top: 5vh;
-  }
-  a.d-link {
-    border: 1px solid #fff;
-    width: 20vw;
-    position: absolute;
-    left: 2vh;
-    top: 5vh;
   }
 }

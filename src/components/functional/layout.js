@@ -4,12 +4,12 @@ import { Helmet } from "react-helmet"
 import "./layout.scss"
 // import NoiseBG from "../components/noisebg"
 import Header from "./header"
-// import useSiteMetadata from "../components/hooks/use-site-metadata"
+import useSiteMetadata from "./util/hooks/use-site-metadata"
 
 export const NavContext = createContext()
 
 const Layout = ({ children, location }) => {
-  // const { title, description } = useSiteMetadata
+  const { title, description } = useSiteMetadata
   return (
     <NavContext.Provider
       value={{
@@ -18,10 +18,9 @@ const Layout = ({ children, location }) => {
     >
       <Helmet>
         <html lang="en" />
-        {/* <title>CSS Blendr</title>
-        <meta name={title} content={description} /> */}
+        <title>{title}</title>
+        <meta name={title} content={description} />
       </Helmet>
-      {/* <NoiseBG /> */}
       <Header currentPath={location.pathname} />
       <TransitionGroup component={null}>
         <Transition

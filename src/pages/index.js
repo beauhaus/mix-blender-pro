@@ -6,7 +6,7 @@ import "../styles/index.scss"
 import Landing from "../components/content/landing"
 import BGTexture from "../components/presentational/bg-texture"
 import LandingLogo from "../icon-components/landing-logo"
-import TopNavBtn from "./../components/functional/topnavbtn"
+import PowerBtn from "../components/functional/power-btn"
 
 const IdxWrapper = styled.div`
   width: 100vw;
@@ -22,7 +22,7 @@ const IndexPage = () => {
       <BGTexture />
       <LandingLogo />
       <Landing />
-      <TopNavBtn />
+      <PowerBtn />
     </IdxWrapper>
   )
 }

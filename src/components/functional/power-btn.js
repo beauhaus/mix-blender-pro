@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import Link from "gatsby-link"
 import styled from "styled-components"
 import { NavContext } from "./layout"
-
+import PwrBtnIcon from "../../icon-components/power-btn-icon"
 const StyledTopNav = styled.button`
   border-radius: 25%;
   outline: none;
@@ -20,6 +20,8 @@ const StyledTopNav = styled.button`
 
   box-shadow: inset 0.3rem 0.3rem 0.2rem 0 #fff,
     inset -0.4rem -0.4rem 0.2rem 0 #000, 0.1rem 0.1rem 0.2rem 0 #000;
+  display: grid;
+  place-items: center;
   &::before {
     content: "";
     border-radius: inherit;
@@ -36,9 +38,10 @@ const StyledTopNav = styled.button`
     position: absolute;
     background: linear-gradient(
       180deg,
-      var(--btn-5) 0%,
-      var(--btn-5) 30%,
-      var(--btn-4) 60%,
+      var(--btn-4) 0%,
+      var(--btn-4) 30%,
+      var(--btn-5) 60%,
+      var(--btn-4) 80%,
       var(--btn-2) 100%
     );
     z-index: 3;
@@ -50,33 +53,6 @@ const StyledTopNav = styled.button`
     box-shadow: inset 0px 0px 6px 2px rgba(0, 0, 0, 0.4),
       inset 0px 0px 1px 1px rgba(0, 0, 0, 0.4);
     color: transparent;
-    ${"" /* &::before {
-      content: "";
-      border-radius: 30%;
-      width: 9vh;
-      height: 9vh;
-      background-image: radial-gradient(
-        var(--btn-6-on) 0%,
-        var(--btn-5-on) 30%,
-        var(--btn-4-on) 30%,
-        var(--btn-3-on) 80%
-      );
-      position: absolute;
-      box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.4);
-    }
-    &::after {
-      content: "";
-      border-radius: 30%;
-      width: 9vh;
-      height: 9vh;
-      background: transparent;
-      filter: blur(8px);
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 4;
-      box-shadow: 0 0 8px 5px var(--btn-3-on);
-    } */}
   }
   &.blender-on a {
     &::before {
@@ -110,10 +86,14 @@ const StyledTopNav = styled.button`
       box-shadow: 0 0 8px 5px var(--btn-3-on);
     }
   }
+  &.blender-on .pwr-btn-icon path {
+    fill: #4d4d4d;
+    fill-opacity: 0.5;
+    stroke: none;
+  }
 `
-// import { NavContext } from "../layout";
 
-const TopNavBtn = () => {
+const PowerBtn = () => {
   const { currentPath } = useContext(NavContext)
   const isHome = currentPath === "/"
 
@@ -122,9 +102,11 @@ const TopNavBtn = () => {
       name={!isHome ? "blender-on" : "blender-off"}
       className={!isHome ? "top-nav-btn blender-on" : "top-nav-btn blender-off"}
     >
-      <Link to={!isHome ? "/" : "/panel"}>{!isHome ? "home" : "panel"}</Link>
+      <Link to={!isHome ? "/" : "/panel"}>
+        <PwrBtnIcon />
+      </Link>
     </StyledTopNav>
   )
 }
 
-export default TopNavBtn
+export default PowerBtn
