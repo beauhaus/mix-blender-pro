@@ -294,13 +294,20 @@ input[type="range"]::-ms-track {
   }
 }
 
-.test-div {
+// This might be good elsewhere, so display none (cf. header.js)
+.home-link {
   display: none;
-  // width: 100vw;
-  // height: 84vh;
-  // border: 1px dashed orange;
-  // position: absolute;
-  // top: 0;
-  // left: 0;
-  // background-color: maroon;// z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 4vh;
+  height: 5vh;
+  width: 5vh;
+  z-index: 20;
+  mix-blend-mode: color;
+  &.active-home {
+    // -webkit-filter: grayscale(1);
+    mix-blend-mode: multiply;
+    filter: grayscale(0.8);
+  }
 }

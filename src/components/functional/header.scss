@@ -16,6 +16,7 @@ header.header-wrapper {
     border: 1px solid #fff;
     width: 10vh;
     height: 10vh;
+    mix-blend-mode: color-burn;
     // background-color: burlywood;
     // mix-blend-mode: color-burn;
     display: none;
@@ -23,6 +24,5 @@ header.header-wrapper {
   // border: 1px solid #fff;
 
   #blender-fav2 {
-    mix-blend-mode: color-burn;
   }
 }
