@@ -6,6 +6,7 @@ import PowerBtn from "./power-btn"
 import { Link } from "gatsby"
 
 const StyledHeader = styled.header`
+padding: 0;
   position: absolute;
   left: 0;
   top: 0;

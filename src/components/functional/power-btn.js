@@ -11,7 +11,7 @@ const StyledTopNav = styled.button`
 
   position: absolute; /*TODO: temp */
   right: 5vw;
-  top: 2vh;
+  top: 1.5vh;
 
   width: 10vh;
   height: 10vh;
@@ -58,8 +58,8 @@ const StyledTopNav = styled.button`
     &::before {
       content: "";
       border-radius: 30%;
-      width: 9vh;
-      height: 9vh;
+      width: 8.8vh;
+      height: 8.8vh;
       background-image: radial-gradient(
         var(--btn-6-on) 0%,
         var(--btn-5-on) 30%,
@@ -68,17 +68,17 @@ const StyledTopNav = styled.button`
       );
       position: absolute;
       top: 0;
-      left: 0vh;
+      left: 0;
       border-radius: 22%;
       box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.4);
     }
     &::after {
       content: "";
       border-radius: 30%;
-      width: 9vh;
-      height: 9vh;
+      width: 8.8vh;
+      height: 8.5vh;
       background: transparent;
-      filter: blur(8px);
+      filter: blur(5px);
       position: absolute;
       top: 0;
       left: 0;
