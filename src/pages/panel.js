@@ -4,6 +4,7 @@ import styled from "styled-components"
 import BGTexture from "../components/presentational/bg-texture"
 import PanelScrnContainer from "../components/presentational/panel-screen-container"
 import BlendCtrlsContainer from "../components/presentational/blend-controls-container"
+// import MixModeArticle from "../components/mode-article"
 
 const StyledBlenderPage = styled.main`
   width: 100vw;
@@ -12,6 +13,12 @@ const StyledBlenderPage = styled.main`
   display: grid;
   grid-template-columns: 100vw;
   grid-template-rows: 13vh 48vh 3vh 20vh 16vh 100vh;
+  article {
+    grid-row: 6;
+    height: 100vh;
+    width: 100vw;
+    background: pink;
+  }
 `
 const BlenderPage = () => {
   return (
@@ -19,6 +26,8 @@ const BlenderPage = () => {
       <BGTexture />
       <PanelScrnContainer />
       <BlendCtrlsContainer />
+      {/* <MixModeArticle /> */}
+      <article>MixMode</article>
     </StyledBlenderPage>
   )
 }
