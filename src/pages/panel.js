@@ -2,19 +2,22 @@ import React, { useState, createContext, useEffect } from "react"
 import styled from "styled-components"
 // import { graphql, useStaticQuery } from "gatsby"
 import BGTexture from "../components/presentational/bg-texture"
-
-const StyledPanel = styled.main`
+// import BlenderScreen from "../components"
+const StyledBlenderPage = styled.main`
   width: 100vw;
   min-height: 100vh;
   height: auto;
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 13vh 48vh 3vh 20vh 16vh 100vh;
 `
-const PanelPage = () => {
+const BlenderPage = () => {
   return (
-    <StyledPanel>
+    <StyledBlenderPage>
       <BGTexture />
-      <h1>TITLE</h1>
-    </StyledPanel>
+      {/* <Viewer/> */}
+    </StyledBlenderPage>
   )
 }
 
-export default PanelPage
+export default BlenderPage

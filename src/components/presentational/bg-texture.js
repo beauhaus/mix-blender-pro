@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import { graphql, useStaticQuery } from "gatsby"
 
 const NoiseBGWrap = styled.div`
   width: 100vw;
@@ -32,29 +31,6 @@ const NoiseBGWrap = styled.div`
 `
 
 const NoiseBG = () => {
-  const data = useStaticQuery(graphql`
-    {
-      file: allFile(
-        filter: {
-          sourceInstanceName: { eq: "util-images" }
-          name: { eq: "orange-overlay-noise" }
-        }
-      ) {
-        edges {
-          node {
-            sharp: childImageSharp {
-              fluid(base64Width: 400) {
-                base64
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
-
-  const NoiseImg = data.file.edges[0].node.sharp.fluid.base64
-
   return (
     <NoiseBGWrap className="noise-bg-container">
       <svg
