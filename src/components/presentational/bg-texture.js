@@ -18,14 +18,8 @@ const NoiseBGWrap = styled.div`
     z-index: -1;
 
     .gradient-overlay {
-      mix-blend-mode: screen;
-      opacity: 0.4;
-    }
-    #top {
-      mix-blend-mode: soft-light;
-    }
-    rect {
-      filter: url(#a);
+      mix-blend-mode: overlay;
+      opacity: 0.7;
     }
   }
 `
@@ -67,20 +61,12 @@ const NoiseBG = () => {
         </defs>
 
         <rect
+          id="textured-rect"
           y="0"
           x="0"
           width="100%"
           height="100%"
           fill="var(--bg-texture)"
-          filter="url(#a)"
-        />
-        <rect
-          id="top"
-          y="0"
-          x="0"
-          width="100%"
-          height="100%"
-          fill="#cd9240"
           filter="url(#a)"
         />
 
@@ -92,9 +78,8 @@ const NoiseBG = () => {
           x2="500"
           y2="500"
         >
-          <stop offset="0" stopColor="#000" />
-          <stop offset=".3" stopColor="#fff" stopOpacity="0.2" />
-          <stop offset=".8" stopColor="#fff" stopOpacity="0.6" />
+          <stop offset=".2" stopColor="#000" stopOpacity="0.5" />
+          <stop offset=".75" stopColor="#fff" stopOpacity="0.3" />
           <stop offset="1" stopColor="#000" stopOpacity="0.5" />
         </linearGradient>
         <rect
