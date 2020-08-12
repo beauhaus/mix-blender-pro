@@ -6,8 +6,13 @@ const LandingLogoWrapper = styled.svg`
   width: 115%;
   top: 10vh;
   left: -50%;
-  mix-blend-mode: overlay;
-
+  .landing-icon-swirl {
+    mix-blend-mode: lighten;
+  }
+  .landing-icon-face {
+    mix-blend-mode: hard-light;
+    ${"" /* display: none; */}
+  }
   .st3 {
     fill: none;
     stroke: #444;
@@ -56,7 +61,7 @@ const LandingLogo = () => (
     <filter id="swirl-blur">
       <feGaussianBlur stdDeviation="4"></feGaussianBlur>
     </filter>
-    <g filter="url(#swirl-blur)" opacity=".7">
+    <g filter="url(#swirl-blur)" opacity=".7" className="landing-icon-swirl">
       <path
         fill="#f1f700"
         d="M123.81 182.27l91.52 4.59-3.43-19.04-91.52-4.59z"
@@ -94,10 +99,11 @@ const LandingLogo = () => (
       strokeWidth="5"
       d="M249.45 248.45c15.11 3.4 36.29 4.04 36.44 13.92.15 9.88-16.2 22.16-23.25 29.3 3.12 3.36 8.59 3.52 8.59 3.52"
     />
-    <g id="face_17_">
+    <g className="landing-icon-face">
       <path
         id="faceback_22_"
-        fill="#ccc"
+        fill="#f5bc61"
+        fillOpacity="0.8"
         stroke="#fff"
         strokeWidth="1"
         d="M260.03 296.54l-133.41 22.57c-6.59-37.15-7.38-72.97.44-106.81l97.41-16.48c20.35 31.44 31.85 65.11 35.56 100.72z"
