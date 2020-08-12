@@ -43,40 +43,40 @@ const StyledHeader = styled.header`
 //   z-index: 20;
 //   mix-blend-mode: color-burn;
 // `
-const HomeLink = () => {
-  const data = useStaticQuery(graphql`
-    {
-      file: allFile(
-        filter: {
-          sourceInstanceName: { eq: "util-images" }
-          name: { eq: "appicon_512x512" }
-        }
-      ) {
-        nodes {
-          sharp: childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
-      }
-    }
-  `)
-  const appIcon = data.file.nodes[0].sharp.fluid
+// const HomeLink = () => {
+//   const data = useStaticQuery(graphql`
+//     {
+//       file: allFile(
+//         filter: {
+//           sourceInstanceName: { eq: "util-images" }
+//           name: { eq: "appicon_512x512" }
+//         }
+//       ) {
+//         nodes {
+//           sharp: childImageSharp {
+//             fluid {
+//               ...GatsbyImageSharpFluid_withWebp_tracedSVG
+//             }
+//           }
+//         }
+//       }
+//     }
+//   `)
+//   const appIcon = data.file.nodes[0].sharp.fluid
 
-  return (
-    <Link to="/" className="home-link" activeClassName="active-home">
-      <Img
-        fluid={appIcon}
-        alt="application icon of a blending of colors in swirl shape"
-      />
-    </Link>
-  )
-}
+//   return (
+//     <Link to="/" className="home-link" activeClassName="active-home">
+//       <Img
+//         fluid={appIcon}
+//         alt="application icon of a blending of colors in swirl shape"
+//       />
+//     </Link>
+//   )
+// }
 const Header = () => {
   return (
     <>
-      <HomeLink />
+      {/* <HomeLink /> */}
       <StyledHeader className="header-wrapper">
         <PowerBtn />
       </StyledHeader>
