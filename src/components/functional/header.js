@@ -6,7 +6,7 @@ import PowerBtn from "./power-btn"
 import { Link } from "gatsby"
 
 const StyledHeader = styled.header`
-padding: 0;
+  padding: 0;
   position: absolute;
   left: 0;
   top: 0;
@@ -18,20 +18,6 @@ padding: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  ${"" /* background: rgba(234, 20, 120, 0.5); */}
-  ${"" /* background-color: #000; */}
-   ${"" /* mix-blend-mode: multiply; */}
-
-  .home-icon {
-    ${"" /* border: 1px solid #fff; */}
-    width: 10vh;
-    height: 10vh;
-    ${"" /* mix-blend-mode: color-burn; */}
-    img {
-      ${"" /* mix-blend-mode: multiply; */}
-    }
-  }
-  
 `
 // const HomeLink = styled.Link`
 //   position: absolute;

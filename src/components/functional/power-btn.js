@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import Link from "gatsby-link"
 import styled from "styled-components"
 import { NavContext } from "./layout"
-import PwrBtnIcon from "../../icon-components/power-btn-icon"
+import PwrBtnIcon from "../presentational/icon-components/power-btn-icon"
 const StyledTopNav = styled.button`
   border-radius: 25%;
   outline: none;
@@ -12,12 +12,10 @@ const StyledTopNav = styled.button`
   position: absolute; /*TODO: temp */
   right: 5vw;
   top: 1.5vh;
-
   width: 10vh;
   height: 10vh;
   background: fuchsia;
   background: linear-gradient(135deg, #fff 0%, #000 30%);
-
   box-shadow: inset 0.3rem 0.3rem 0.2rem 0 #fff,
     inset -0.4rem -0.4rem 0.2rem 0 #000, 0.1rem 0.1rem 0.2rem 0 #000;
   display: grid;

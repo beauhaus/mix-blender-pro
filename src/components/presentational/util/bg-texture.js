@@ -4,7 +4,6 @@ import styled from "styled-components"
 const NoiseBGWrap = styled.div`
   width: 100vw;
   height: 100vh;
-  height: auto;
   overflowx: hidden;
   position: absolute;
   top: 0;
@@ -12,8 +11,7 @@ const NoiseBGWrap = styled.div`
   svg {
     position: relative;
     width: 100vw;
-    min-height: 100vh;
-    height: auto;
+    height: 100%;
     overflow: hidden;
     z-index: -1;
 
