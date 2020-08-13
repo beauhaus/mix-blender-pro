@@ -3,7 +3,7 @@ import Img from "gatsby-image"
 import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 import PowerBtn from "./power-btn"
-import { Link } from "gatsby"
+import Link from "gatsby-link"
 
 const StyledHeader = styled.header`
   padding: 0;
@@ -19,6 +19,22 @@ const StyledHeader = styled.header`
   justify-content: space-around;
   align-items: center;
 `
+
+// const StyledTestLink = styled.Link`
+// position: absolute;
+// top: 0;
+// left: 0;
+// color: #fff;
+// margin: 3vh;
+// width: 10vh;
+// height: auto;
+// border: 1px solid brown;
+// `
+// const TestLink = () => (
+//   <Link className="test-link" to="/test-page">
+//     TEST
+//   </Link>
+// )
 // const HomeLink = styled.Link`
 //   position: absolute;
 //   top: 0;
@@ -64,6 +80,9 @@ const Header = () => {
   return (
     <>
       {/* <HomeLink /> */}
+      <Link className="test-link" to="/test-page">
+        TEST
+      </Link>
       <StyledHeader className="header-wrapper">
         <PowerBtn />
       </StyledHeader>

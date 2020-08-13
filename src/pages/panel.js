@@ -13,6 +13,7 @@ const StyledBlenderPage = styled.main`
   display: grid;
   grid-template-columns: 100vw;
   grid-template-rows: 13vh 48vh 3vh 20vh 16vh auto;
+  position: relative;
 `
 const BlenderPage = () => {
   return (

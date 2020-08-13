@@ -1,29 +1,33 @@
 import React, { useContext } from "react"
 import styled from "styled-components"
+
 // import { AppContext } from "../pages/application";
 // import { animateScroll } from "react-scroll";
 // import useModes from "./hooks/use-modes";
 
+import ArticleBG from "../presentational/util/bg-article-texture"
 const StyledModeArticle = styled.article`
   grid-row: 6;
   min-height: 100vh;
   height: auto;
   width: 100vw;
   display: grid;
-  background: lemonchiffon;
-  grid-template-columns: 45vw 45vw;
+  background: transparent;
+  grid-template-columns: 10vw 1fr 10vw;
   grid-template-rows: 70vh 10vh;
   position: relative;
 
   p {
-    grid-column: 1/-1;
+    margin: 5vh auto;
+    grid-column: 2;
     grid-row: 1;
-    font-size: 3rem;
+    font-size: 2rem;
+    text-align: left;
   }
 
   .return-to-top-btn {
     grid-column: 2;
-    grid-row: 2;
+    grid-row: 1;
     margin: 0;
     width: 45vw;
     height: 10vh;
@@ -31,9 +35,13 @@ const StyledModeArticle = styled.article`
     box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
   }
   .temp-btn {
-    width: 45vw;
-    height: 10vh;
-    border: 1px solid brown;
+    width: 25vw;
+    height: 8vh;
+    grid-column: 2;
+    grid-row: 2;
+    background: whitesmoke;
+    border: 1px solid lemonchiffon;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
   }
 `
 
@@ -46,6 +54,7 @@ const ModeArticle = props => {
   return (
     // <StyledModeArticle id={`${mixMode}-article`} className="mode-article">
     <StyledModeArticle id={`mixmode-article`} className="mode-article">
+      <ArticleBG />
       {/* <h2>ModeTitle{thisMode.title}</h2> */}
       <h2>ModeTitle</h2>
       <p>
@@ -56,7 +65,9 @@ const ModeArticle = props => {
       </p>
       {/* <p>{thisMode.excerpt}</p> */}
 
-      <button className="temp-btn">TempBtn</button>
+      <button className="temp-btn" onClick={console.log("CLICK!")}>
+        TempBtn
+      </button>
       {/* <button
         className="return-to-top-btn"
         onClick={() =>
