@@ -1,5 +1,6 @@
 import React, { useContext } from "react"
 import styled from "styled-components"
+import "typeface-gruppo"
 import "typeface-special-elite"
 
 // import { AppContext } from "../pages/application";
@@ -24,15 +25,22 @@ const StyledModeArticle = styled.article`
     font-size: 2rem;
     text-align: left;
     h1 {
-      font-family: "Lucida Bright", serif;
+      font-family: "Special Elite", serif;
       font-size: 3rem;
     }
     p {
-      font-family: "Lucida Bright";
-      font-weight: lighter;
+      font-family: "Gruppo";
+      ${"" /* font-family: "Special Elite"; */}
+      ${"" /* font-weight: lighter; */}
+      font-weight: normal;
       margin: 3vh auto;
-      font-size: 1.8rem;
+      font-size: 2.3rem;
+      color: #111;
       text-align: left;
+      span {
+        text-shadow: -0.3px 0.3px 0 #000, 0.3px 0.3px 0 #000,
+          0.3px -0.3px 0 #000, -0.3px -0.3px 0 #000;
+      }
     }
   }
 
@@ -68,12 +76,17 @@ const ModeArticle = props => {
       <ArticleBG />
       {/* <h2>ModeTitle{thisMode.title}</h2> */}
       <section className="text-container">
-        <h1>ModeTitle</h1>
+        <h1>color-burn</h1>
         <p>
-          Mode excerpt Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Voluptates animi incidunt quam cupiditate voluptate natus nisi vero
-          debitis ipsam libero itaque impedit nostrum, commodi, adipisci
-          asperiores quos praesentium quidem. Asperiores?
+          <span>Mode excerpt Lorem ipsum dolor</span> sit amet consectetur
+          adipisicing elit. Voluptates animi incidunt quam cupiditate voluptate
+          natus nisi vero debitis ipsam libero itaque impedit nostrum, commodi,
+          adipisci asperiores quos praesentium quidem. Asperiores?
+        </p>
+        <p>
+          <span>Voluptates animi incidunt quam cupiditate voluptate</span>
+          natus nisi vero debitis ipsam libero itaque impedit nostrum, commodi,
+          adipisci asperiores quos praesentium quidem. Asperiores?
         </p>
         {/* <p>{thisMode.excerpt}</p> */}
       </section>

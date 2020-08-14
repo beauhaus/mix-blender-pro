@@ -32,6 +32,7 @@
     "react-helmet": "^6.1.0",
     "react-transition-group": "^4.4.1",
     "styled-components": "^5.1.1",
+    "typeface-gruppo": "0.0.72",
     "typeface-nanum-pen-script": "0.0.63",
     "typeface-oleo-script-swash-caps": "0.0.72",
     "typeface-rajdhani": "0.0.72",
