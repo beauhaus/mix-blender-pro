@@ -19,27 +19,27 @@ const StyledModeArticle = styled.article`
   grid-template-rows: 70vh 10vh;
   position: relative;
   section {
-    margin: 5vh auto;
+    margin: 0 auto;
+    ${"" /* padding: 12vh auto; */}
     grid-column: 2;
     grid-row: 1;
-    font-size: 2rem;
-    text-align: left;
+    text-align: right;
     h1 {
-      font-family: "Special Elite", serif;
-      font-size: 3rem;
+      margin: 1rem;
+      font-family: "Gruppo", serif;
+      font-size: 4rem;
     }
     p {
-      font-family: "Gruppo";
+      font-family: "Open Sans", sans-serif;
       ${"" /* font-family: "Special Elite"; */}
       ${"" /* font-weight: lighter; */}
-      font-weight: normal;
-      margin: 3vh auto;
-      font-size: 2.3rem;
+      font-weight: 100;
+      margin: 1vh auto;
+      font-size: 2rem;
       color: #111;
       text-align: left;
       span {
-        text-shadow: -0.3px 0.3px 0 #000, 0.3px 0.3px 0 #000,
-          0.3px -0.3px 0 #000, -0.3px -0.3px 0 #000;
+        font-weight: 600;
       }
     }
   }
@@ -84,7 +84,7 @@ const ModeArticle = props => {
           adipisci asperiores quos praesentium quidem. Asperiores?
         </p>
         <p>
-          <span>Voluptates animi incidunt quam cupiditate voluptate</span>
+          <span>Voluptates animi incidunt quam cupiditate voluptate </span>
           natus nisi vero debitis ipsam libero itaque impedit nostrum, commodi,
           adipisci asperiores quos praesentium quidem. Asperiores?
         </p>

@@ -1,6 +1,8 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 // import { graphql, useStaticQuery } from "gatsby"
+import { navigate } from "gatsby"
+
 import BGTexture from "../components/presentational/util/bg-texture"
 import PanelScrnContainer from "../components/presentational/panel-screen-container"
 import BlendCtrlsContainer from "../components/presentational/blend-controls-container"
@@ -15,7 +17,12 @@ const StyledBlenderPage = styled.main`
   grid-template-rows: 13vh 48vh 3vh 20vh 16vh auto;
   position: relative;
 `
+
 const BlenderPage = () => {
+  useEffect(() => {
+    navigate("/")
+  }, [])
+
   return (
     <StyledBlenderPage>
       <BGTexture />
