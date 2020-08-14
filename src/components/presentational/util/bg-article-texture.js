@@ -72,32 +72,44 @@ const ArticleBG = props => {
         fill="url(#grad)"
         fillOpacity="0.4"
       />
+      <filter id="innerShad">
+        <feOffset dy="2" dx="-3" />
+        <feGaussianBlur stdDeviation="1" result="offset-blur" />
+        <feComposite
+          operator="out"
+          in2="offset-blur"
+          in="SourceGraphic"
+          result="inverse"
+        />
+        <feFlood result="color" floodColor="#000" floodOpacity=".8" />
+        <feComposite operator="in" in2="inverse" in="color" result="shadow" />
+        <feComposite in2="SourceGraphic" in="shadow" />
+      </filter>
       <defs>
         <g id="spiral" className="spiral-units">
           <rect
             id="hole"
             width="6"
-            height="17"
+            height="18"
             x="15"
             y="-1"
-            fill="#bcbcbc"
-            stroke="#777"
+            fill="#cab67e"
             strokeWidth=".4"
+            filter="url(#innerShad)"
           />
-          {/* <rect id="shadow" width="1" height="4.5" x="6" y="-.2" fill="red" /> */}
           <linearGradient
             id="spiral-grad"
             x1="0"
-            x2="5"
+            x2="18"
             y1="0"
             y2="0"
             gradientUnits="userSpaceOnUse"
           >
             <stop offset="0" stopColor="#441e0f" />
             <stop offset=".1135" stopColor="#523325" />
-            <stop offset=".4554" stopColor="#93786b" />
-            <stop offset=".55" stopColor="#93786b" />
-            <stop offset=".8606" stopColor="#461f0d" />
+            <stop offset=".3554" stopColor="#93786b" />
+            <stop offset=".45" stopColor="#93786b" />
+            <stop offset=".7606" stopColor="#461f0d" />
             <stop offset="1" stopColor="#341b0d" />
           </linearGradient>
           <rect width="16" height="16" fill="url(#spiral-grad)" />
@@ -115,6 +127,9 @@ const ArticleBG = props => {
       <use xlinkHref="#spiral" x="0" y="390" />
       <use xlinkHref="#spiral" x="0" y="430" />
       <use xlinkHref="#spiral" x="0" y="470" />
+      <use xlinkHref="#spiral" x="0" y="510" />
+      <use xlinkHref="#spiral" x="0" y="560" />
+      <use xlinkHref="#spiral" x="0" y="600" />
     </StyledArticleBG>
   )
 }

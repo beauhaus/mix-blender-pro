@@ -14,7 +14,7 @@ const TestPage = props => {
   return (
     <StyledTestPage className="TestPage">
       <svg
-        class="svg2"
+        className="svg2"
         viewBox="0 0 600 1200"
         xmlnsXlink="http://www.w3.org/1999/xlink"
         preserveAspectRatio="none"
@@ -27,11 +27,11 @@ const TestPage = props => {
           gradientTransform="matrix(-.1409 .99 -.5472 -.0779 670.614 349.727)"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#fceec3" />
-          <stop offset=".216" stop-color="#f7e7b2" />
-          <stop offset=".407" stop-color="#f6e3a9" />
-          <stop offset=".67" stop-color="#f9d786" />
-          <stop offset="1" stop-color="#e7aa3c" />
+          <stop offset="0" stopColor="#fceec3" />
+          <stop offset=".216" stopColor="#f7e7b2" />
+          <stop offset=".407" stopColor="#f6e3a9" />
+          <stop offset=".67" stopColor="#f9d786" />
+          <stop offset="1" stopColor="#e7aa3c" />
         </radialGradient>
         <defs>
           <filter id="roughpaper">
@@ -43,7 +43,7 @@ const TestPage = props => {
             />
             <feDiffuseLighting
               in="noise"
-              lighting-color="#fff"
+              lightingColor="#fff"
               surfaceScale="2.5"
               result="light"
             >
@@ -61,7 +61,7 @@ const TestPage = props => {
         </defs>
         <use xlinkHref="#rect-temp" filter="url(#roughpaper)" />
         <use
-          class="card"
+          className="card"
           xlinkHref="#rect-temp"
           width="100%"
           height="100%"
