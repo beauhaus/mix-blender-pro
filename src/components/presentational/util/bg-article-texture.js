@@ -128,8 +128,7 @@ const ArticleBG = props => {
       <use xlinkHref="#spiral" x="0" y="430" />
       <use xlinkHref="#spiral" x="0" y="470" />
       <use xlinkHref="#spiral" x="0" y="510" />
-      <use xlinkHref="#spiral" x="0" y="560" />
-      <use xlinkHref="#spiral" x="0" y="600" />
+      <use xlinkHref="#spiral" x="0" y="550" />
     </StyledArticleBG>
   )
 }

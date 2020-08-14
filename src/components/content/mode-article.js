@@ -1,5 +1,6 @@
 import React, { useContext } from "react"
 import styled from "styled-components"
+import "typeface-special-elite"
 
 // import { AppContext } from "../pages/application";
 // import { animateScroll } from "react-scroll";
@@ -16,13 +17,23 @@ const StyledModeArticle = styled.article`
   grid-template-columns: 10vw 1fr 10vw;
   grid-template-rows: 70vh 10vh;
   position: relative;
-
-  p {
+  section {
     margin: 5vh auto;
     grid-column: 2;
     grid-row: 1;
     font-size: 2rem;
     text-align: left;
+    h1 {
+      font-family: "Lucida Bright", serif;
+      font-size: 3rem;
+    }
+    p {
+      font-family: "Lucida Bright";
+      font-weight: lighter;
+      margin: 3vh auto;
+      font-size: 1.8rem;
+      text-align: left;
+    }
   }
 
   .return-to-top-btn {
@@ -56,16 +67,17 @@ const ModeArticle = props => {
     <StyledModeArticle id={`mixmode-article`} className="mode-article">
       <ArticleBG />
       {/* <h2>ModeTitle{thisMode.title}</h2> */}
-      <h2>ModeTitle</h2>
-      <p>
-        Mode excerpt Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Voluptates animi incidunt quam cupiditate voluptate natus nisi vero
-        debitis ipsam libero itaque impedit nostrum, commodi, adipisci
-        asperiores quos praesentium quidem. Asperiores?
-      </p>
-      {/* <p>{thisMode.excerpt}</p> */}
-
-      <button className="temp-btn" onClick={console.log("CLICK!")}>
+      <section className="text-container">
+        <h1>ModeTitle</h1>
+        <p>
+          Mode excerpt Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Voluptates animi incidunt quam cupiditate voluptate natus nisi vero
+          debitis ipsam libero itaque impedit nostrum, commodi, adipisci
+          asperiores quos praesentium quidem. Asperiores?
+        </p>
+        {/* <p>{thisMode.excerpt}</p> */}
+      </section>
+      <button className="temp-btn" onClick={() => console.log("CLICK!")}>
         TempBtn
       </button>
       {/* <button
