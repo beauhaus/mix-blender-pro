@@ -2,37 +2,46 @@ import React, { useContext, useState, useEffect } from "react"
 import Link from "gatsby-link"
 import styled from "styled-components"
 import { NavContext } from "./layout"
-import { AppContext } from "../../pages/index"
 
 import PwrBtnIcon from "../presentational/icon-components/power-btn-icon"
 const StyledTopNav = styled.button`
   border-radius: 25%;
   outline: none;
   border: none;
-  position: relative;
-
   position: absolute; /*TODO: temp */
   right: 5vw;
   top: 1.5vh;
   width: 10vh;
   height: 10vh;
-  background: fuchsia;
-  background: linear-gradient(135deg, #fff 0%, #000 30%);
-  box-shadow: inset 0.3rem 0.3rem 0.2rem 0 #fff,
-    inset -0.4rem -0.4rem 0.2rem 0 #000, 0.1rem 0.1rem 0.2rem 0 #000;
+  background: linear-gradient(135deg, #fff 10%, #fff 40%, #000 60%, #fff 90%);
+  box-shadow: inset -0.4vh -0.4vh 0.1vh 0 #000, 0 0 7px 2px #888,
+    inset 0.4vh 0.4vh 0.1vh 0 #fff;
   display: grid;
   place-items: center;
+
   &::before {
     content: "";
     border-radius: inherit;
-    background: #000;
-    box-shadow: -0.2rem -0.2rem 0.2rem 0 #000, 0.2rem 0.2rem 0.3rem 0 #fff;
-    top: 5%;
-    left: 5%;
+    box-shadow: -0.2vh -0.2vh 0.3vh 0.2vh #000, 0.2vh 0.2vh 0.3vh 0.2vh #fff;
     position: absolute;
     z-index: 1;
-    width: 90%;
-    height: 90%;
+    top: 7.2%;
+    left: 7.2%;
+    width: 85%;
+    height: 85%;
+  }
+
+  &::after {
+    ${"" /* content: "";
+    border-radius: inherit;
+    background: olive;
+    box-shadow: -0.2vh -0.2vh 0.3vh 0.2vh #000, 0.2vh 0.2vh 0.3vh 0.2vh #fff;
+    position: absolute;
+    z-index: 1;
+    top: 7.2%;
+    left: 7.2%;
+    width: 85%;
+    height: 85%; */}
   }
   a {
     position: absolute;
@@ -45,10 +54,10 @@ const StyledTopNav = styled.button`
       var(--btn-2) 100%
     );
     z-index: 3;
-    width: 9vh;
-    height: 9vh;
-    top: 0.6vh;
-    left: 0.55vh;
+    top: 7.2%;
+    left: 7.2%;
+    width: 85%;
+    height: 85%;
     border-radius: 22%;
     box-shadow: inset 0px 0px 6px 2px rgba(0, 0, 0, 0.4),
       inset 0px 0px 1px 1px rgba(0, 0, 0, 0.4);
@@ -57,9 +66,7 @@ const StyledTopNav = styled.button`
   &.blender-on a {
     &::before {
       content: "";
-      border-radius: 30%;
-      width: 8.8vh;
-      height: 8.8vh;
+
       background-image: radial-gradient(
         var(--btn-6-on) 0%,
         var(--btn-5-on) 30%,
@@ -67,8 +74,10 @@ const StyledTopNav = styled.button`
         var(--btn-3-on) 80%
       );
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 1%;
+      left: 1%;
+      width: 98%;
+      height: 98%;
       border-radius: 22%;
       box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.4);
     }
@@ -78,12 +87,13 @@ const StyledTopNav = styled.button`
       width: 8.8vh;
       height: 8.5vh;
       background: transparent;
-      filter: blur(5px);
+      filter: blur(8px);
       position: absolute;
       top: 0;
       left: 0;
       z-index: 4;
-      box-shadow: 0 0 8px 5px var(--btn-3-on);
+      ${"" /* box-shadow: 0 0 8px 5px var(--btn-3-on); */}
+      box-shadow: 0px 0 4px 8px var(--btn-3-on);
     }
   }
   &.blender-on .pwr-btn-icon path {
