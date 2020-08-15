@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect, createContext } from "react"
 import styled from "styled-components"
 import "normalize.css"
 import "../styles/index.scss"
@@ -14,10 +14,11 @@ const IdxWrapper = styled.div`
   overflow: hidden;
   position: relative;
 `
+export const AppContext = createContext()
 
 const IndexPage = () => {
   return (
-    <IdxWrapper>
+    <IdxWrapper className="index-wrapper">
       <BGTexture />
       <LandingLogo />
       <Landing />

@@ -1,7 +1,9 @@
-import React, { useContext } from "react"
+import React, { useContext, useState, useEffect } from "react"
 import Link from "gatsby-link"
 import styled from "styled-components"
 import { NavContext } from "./layout"
+import { AppContext } from "../../pages/index"
+
 import PwrBtnIcon from "../presentational/icon-components/power-btn-icon"
 const StyledTopNav = styled.button`
   border-radius: 25%;
@@ -92,15 +94,23 @@ const StyledTopNav = styled.button`
 `
 
 const PowerBtn = () => {
-  const { currentPath } = useContext(NavContext)
+  // const { directURL, setDirectUrl } = useContext(AppContext)
+
+  const { currentPath, fromLanding, setFromLanding } = useContext(NavContext)
   const isHome = currentPath === "/"
 
+  const clickHandler = () => {
+    if (isHome && !fromLanding) {
+      setFromLanding(true)
+    }
+  }
+  console.log("btn: FL ", currentPath, fromLanding)
   return (
     <StyledTopNav
       name={!isHome ? "blender-on" : "blender-off"}
       className={!isHome ? "top-nav-btn blender-on" : "top-nav-btn blender-off"}
     >
-      <Link to={!isHome ? "/" : "/panel"}>
+      <Link to={!isHome ? "/" : "/panel"} onClick={clickHandler}>
         <PwrBtnIcon />
       </Link>
     </StyledTopNav>

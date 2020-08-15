@@ -1,14 +1,15 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useContext } from "react"
 import styled from "styled-components"
 // import { graphql, useStaticQuery } from "gatsby"
 import { navigate } from "gatsby"
-
 import BGTexture from "../components/presentational/util/bg-texture"
 import PanelScrnContainer from "../components/presentational/panel-screen-container"
 import BlendCtrlsContainer from "../components/presentational/blend-controls-container"
 import ModeArticle from "../components/content/mode-article"
 
-const StyledBlenderPage = styled.main`
+import { NavContext } from "../components/functional/layout"
+
+const StyledPanelPage = styled.main`
   width: 100vw;
   min-height: 100vh;
   height: auto;
@@ -18,19 +19,25 @@ const StyledBlenderPage = styled.main`
   position: relative;
 `
 
-const BlenderPage = () => {
+const PanelPage = () => {
+  const { fromLanding } = useContext(NavContext)
+  console.log("PanelPage: ", fromLanding)
+
   useEffect(() => {
-    navigate("/")
+    if (!fromLanding) {
+      navigate("/")
+    }
   }, [])
 
   return (
-    <StyledBlenderPage>
+    <StyledPanelPage>
+      {/* {console.log("FL(p): ", fromLanding)} */}
       <BGTexture />
       <PanelScrnContainer />
       <BlendCtrlsContainer />
       <ModeArticle />
-    </StyledBlenderPage>
+    </StyledPanelPage>
   )
 }
 
-export default BlenderPage
+export default PanelPage

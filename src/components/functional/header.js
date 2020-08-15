@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import Img from "gatsby-image"
 import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
@@ -80,9 +80,9 @@ const Header = () => {
   return (
     <>
       {/* <HomeLink /> */}
-      <Link className="test-link" to="/test-page">
-        TEST
-      </Link>
+      {/* {console.log("benderon: ", blenderOn)} */}
+
+      <Link to="/test-page"></Link>
       <StyledHeader className="header-wrapper">
         <PowerBtn />
       </StyledHeader>
