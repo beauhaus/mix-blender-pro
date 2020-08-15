@@ -97,11 +97,14 @@ const PowerBtn = () => {
   const { currentPath, fromLanding, setFromLanding } = useContext(NavContext)
   const isHome = currentPath === "/"
 
-  const clickHandler = () => {
-    if (isHome && !fromLanding) {
-      setFromLanding(true)
-    }
+  const [hasMounted, setHasMounted] = useState(false)
+  useEffect(() => {
+    setHasMounted(true)
+  }, [])
+  if (!hasMounted) {
+    return null
   }
+
   return (
     <StyledTopNav
       name={!isHome ? "blender-on" : "blender-off"}

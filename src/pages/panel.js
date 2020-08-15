@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react"
+import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 // import { graphql, useStaticQuery } from "gatsby"
 import { navigate } from "gatsby"
@@ -7,7 +7,7 @@ import PanelScrnContainer from "../components/presentational/panel-screen-contai
 import BlendCtrlsContainer from "../components/presentational/blend-controls-container"
 import ModeArticle from "../components/content/mode-article"
 
-import { NavContext } from "../components/functional/layout"
+// import { NavContext } from "../components/functional/layout"
 
 const StyledPanelPage = styled.main`
   width: 100vw;
@@ -20,15 +20,15 @@ const StyledPanelPage = styled.main`
 `
 
 const PanelPage = () => {
-  const { fromLanding } = useContext(NavContext)
+  // const { fromLanding } = useContext(NavContext)
 
   // useEffect(() => {
   //   if (!fromLanding) {
   //     navigate("/")
   //   }
   // }, [])
-  const [hasMounted, setHasMounted] = React.useState(false)
-  React.useEffect(() => {
+  const [hasMounted, setHasMounted] = useState(false)
+  useEffect(() => {
     setHasMounted(true)
   }, [])
   if (!hasMounted) {
