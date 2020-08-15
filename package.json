@@ -41,6 +41,7 @@
     "typeface-warnes": "0.0.71"
   },
   "devDependencies": {
+    "gatsby-plugin-remove-trailing-slashes": "^2.3.11",
     "prettier": "2.0.5"
   },
   "repository": {

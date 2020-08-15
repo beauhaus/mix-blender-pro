@@ -39,13 +39,13 @@ const StyledLanding = styled.section`
       }
     }
     span {
-      letter-spacing: 1vw;
+      letter-spacing: 4px;
       font: normal 3rem "Seaweed Script", -apple-system, Segoe UI, Roboto;
       font-weight: bold;
       color: lemonchiffon;
       text-shadow: 1px 1px 2px #000;
       transform: rotate(-7deg) translateY(-0.2rem);
-      margin-left: 2vw;
+      margin-left: 1rem;
       z-index: 0;
     }
   }
