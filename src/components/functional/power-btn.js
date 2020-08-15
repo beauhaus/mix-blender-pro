@@ -110,7 +110,7 @@ const PowerBtn = () => {
       name={!isHome ? "blender-on" : "blender-off"}
       className={!isHome ? "top-nav-btn blender-on" : "top-nav-btn blender-off"}
     >
-      <Link to={!isHome ? "/" : "/panel"} onClick={clickHandler}>
+      <Link to={!isHome ? "/" : "/panel"}>
         <PwrBtnIcon />
       </Link>
     </StyledTopNav>
