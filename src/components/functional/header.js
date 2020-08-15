@@ -80,7 +80,6 @@ const Header = () => {
   return (
     <>
       {/* <HomeLink /> */}
-      {/* {console.log("benderon: ", blenderOn)} */}
 
       <Link to="/test-page"></Link>
       <StyledHeader className="header-wrapper">

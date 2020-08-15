@@ -94,8 +94,6 @@ const StyledTopNav = styled.button`
 `
 
 const PowerBtn = () => {
-  // const { directURL, setDirectUrl } = useContext(AppContext)
-
   const { currentPath, fromLanding, setFromLanding } = useContext(NavContext)
   const isHome = currentPath === "/"
 
@@ -104,7 +102,6 @@ const PowerBtn = () => {
       setFromLanding(true)
     }
   }
-  console.log("btn: FL ", currentPath, fromLanding)
   return (
     <StyledTopNav
       name={!isHome ? "blender-on" : "blender-off"}

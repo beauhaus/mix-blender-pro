@@ -21,17 +21,22 @@ const StyledPanelPage = styled.main`
 
 const PanelPage = () => {
   const { fromLanding } = useContext(NavContext)
-  console.log("PanelPage: ", fromLanding)
 
-  useEffect(() => {
-    if (!fromLanding) {
-      navigate("/")
-    }
+  // useEffect(() => {
+  //   if (!fromLanding) {
+  //     navigate("/")
+  //   }
+  // }, [])
+  const [hasMounted, setHasMounted] = React.useState(false)
+  React.useEffect(() => {
+    setHasMounted(true)
   }, [])
+  if (!hasMounted) {
+    return null
+  }
 
   return (
     <StyledPanelPage>
-      {/* {console.log("FL(p): ", fromLanding)} */}
       <BGTexture />
       <PanelScrnContainer />
       <BlendCtrlsContainer />
