@@ -26,12 +26,15 @@ const StyledFlipBtnContainer = styled.button`
     height: 85%;
   }
   & > div {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 3;
     margin: 0;
-    border: 1px solid red;
+    ${"" /* border: 1px solid #fff; */}
     width: 90%;
-    height: 85%;
+    height: 86%;
     border-radius: 18px;
     box-shadow: inset 0px 0px 6px 2px rgba(0, 0, 0, 0.4),
       inset -3px -2px 4px 1px rgba(0, 0, 0, 0.8);
