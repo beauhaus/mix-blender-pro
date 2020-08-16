@@ -10,15 +10,14 @@ const StyledFlipBtnContainer = styled.button`
   height: 100%;
   background: linear-gradient(135deg, #fff 0%, #fff 5%, #000 60%, #fff 90%);
   background: #fff;
-  box-shadow: inset -1vh -1vh 0.8vh 0.5vh #000, 1px 1px 3px 0 #555,
-    inset 0.5vh 0.5vh 0.5vh 0.5vh #fff;
+  box-shadow: inset -7px -7px 8px 0px #000, 1px 1px 3px 0 #555,
+    inset 8px 8px 8px 0px #fff;
   display: grid;
   place-items: center;
-
   &::before {
     content: "";
     border-radius: 18px;
-    box-shadow: -0.6vh -0.4vh 0.8vh 0.3vh #000, 0.5vh 0.4vh 0.4vh 0.4vh #fff;
+    box-shadow: -2px -2px 6px 2px #000, 6px 5px 4px 0px #fff;
     position: absolute;
     z-index: 1;
     top: 7.2%;
@@ -34,16 +33,14 @@ const StyledFlipBtnContainer = styled.button`
     height: 85%;
     border-radius: 18px;
     box-shadow: inset 0px 0px 6px 2px rgba(0, 0, 0, 0.4),
-      inset 0px 0px 1px 1px rgba(0, 0, 0, 0.4),
-      inset -5px -2px 5px 0 rgba(0, 0, 0, 1);
+      inset -3px -2px 4px 1px rgba(0, 0, 0, 0.8);
     background: linear-gradient(
       90deg,
-      #4c4c24 5%,
-      #51563e 10%,
-      #5e6543 25%,
-      #6c7750 50%,
-      #6e7f5c 76%,
-      #859a84 88%,
+      #000 0%,
+      #3a3d2c 9%,
+      #5e6543 20%,
+      #6e7f5c 66%,
+      #859a84 85%,
       #f3f1f1 100%
     );
     filter: grayscale(50%);
