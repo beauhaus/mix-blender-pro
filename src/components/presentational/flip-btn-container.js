@@ -28,7 +28,8 @@ const StyledFlipBtnContainer = styled.button`
   & > div {
     position: relative;
     z-index: 3;
-    margin: 7.2%;
+    margin: 0;
+    border: 1px solid red;
     width: 90%;
     height: 85%;
     border-radius: 18px;
