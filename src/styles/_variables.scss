@@ -79,7 +79,7 @@ $test: rgba(209, 93, 219, 0.5);
     //basedark:
     fill: var(--active-blue);
     //baselight:
-    fill: hsl(120, 100%, 42%);
+    fill: #5c775c;
     fill: rgba(255, 255, 255, 0.664);
 
     //border
@@ -92,5 +92,23 @@ $test: rgba(209, 93, 219, 0.5);
     fill: rgba(238, 214, 214, 0.712);
     fill: rgba(185, 167, 146, 0.883);
     fill: rgba(144, 144, 144, 0.787);
+
+    color: hsl(60, 35%, 12%);
+    color: hsl(72, 16%, 19%);
+    color: hsl(72, 20%, 23%);
+    color: hsl(77, 20%, 29%);
+    color: hsl(90, 16%, 43%);
+    color: hsl(115, 10%, 56%);
+    color: hsl(150, 11%, 72%);
+    color: hsl(0, 6%, 95%);
+
+    color: #4c4c24;
+    color: hsl(72, 16%, 29%);
+    color: #5e6543;
+    color: #6c7750;
+    color: #6e7f5c;
+    color: #859a84;
+    color: hsl(150, 11%, 72%);
+    color: hsl(0, 6%, 95%);
   }
 }
