@@ -13,16 +13,17 @@ const StyledTopNav = styled.button`
   top: 1.5vh;
   width: 10vh;
   height: 10vh;
-  background: linear-gradient(135deg, #fff 10%, #fff 40%, #000 60%, #fff 90%);
-  box-shadow: inset -0.4vh -0.4vh 0.1vh 0 #000, 0 0 7px 2px #888,
-    inset 0.4vh 0.4vh 0.1vh 0 #fff;
+  background: linear-gradient(135deg, #fff 0%, #fff 5%, #000 60%, #fff 90%);
+  box-shadow: inset -0.4vh -0.4vh 0.1vh 0 #000,
+    0.4vh 0.4vh 4px 0 rgba(0, 0, 0, 0.5), inset 0.4vh 0.4vh 0.5vh 0 #fff;
   display: grid;
   place-items: center;
+  ${"" /* filter: drop-shadow(inset 2px 2px 2px fuchsia); */}
 
   &::before {
     content: "";
     border-radius: inherit;
-    box-shadow: -0.2vh -0.2vh 0.3vh 0.2vh #000, 0.2vh 0.2vh 0.3vh 0.2vh #fff;
+    box-shadow: -0.2vh -0.1vh 0.3vh 0.2vh #000, 0.2vh 0.2vh 0.3vh 0.2vh #fff;
     position: absolute;
     z-index: 1;
     top: 7.2%;
@@ -31,18 +32,6 @@ const StyledTopNav = styled.button`
     height: 85%;
   }
 
-  &::after {
-    ${"" /* content: "";
-    border-radius: inherit;
-    background: olive;
-    box-shadow: -0.2vh -0.2vh 0.3vh 0.2vh #000, 0.2vh 0.2vh 0.3vh 0.2vh #fff;
-    position: absolute;
-    z-index: 1;
-    top: 7.2%;
-    left: 7.2%;
-    width: 85%;
-    height: 85%; */}
-  }
   a {
     position: absolute;
     background: linear-gradient(
@@ -63,10 +52,11 @@ const StyledTopNav = styled.button`
       inset 0px 0px 1px 1px rgba(0, 0, 0, 0.4);
     color: transparent;
   }
+
   &.blender-on a {
     &::before {
       content: "";
-
+      border-radius: 22%;
       background-image: radial-gradient(
         var(--btn-6-on) 0%,
         var(--btn-5-on) 30%,
@@ -78,7 +68,6 @@ const StyledTopNav = styled.button`
       left: 1%;
       width: 98%;
       height: 98%;
-      border-radius: 22%;
       box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.4);
     }
     &::after {
@@ -92,10 +81,10 @@ const StyledTopNav = styled.button`
       top: 0;
       left: 0;
       z-index: 4;
-      ${"" /* box-shadow: 0 0 8px 5px var(--btn-3-on); */}
       box-shadow: 0px 0 4px 8px var(--btn-3-on);
     }
   }
+
   &.blender-on .pwr-btn-icon path {
     fill: #4d4d4d;
     fill-opacity: 0.5;
