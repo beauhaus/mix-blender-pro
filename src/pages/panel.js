@@ -20,13 +20,7 @@ const StyledPanelPage = styled.main`
 `
 
 const PanelPage = () => {
-  // const { fromLanding } = useContext(NavContext)
-
-  // useEffect(() => {
-  //   if (!fromLanding) {
-  //     navigate("/")
-  //   }
-  // }, [])
+  // secures proper rehydration
   const [hasMounted, setHasMounted] = useState(false)
   useEffect(() => {
     setHasMounted(true)

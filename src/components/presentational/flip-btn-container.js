@@ -1,6 +1,5 @@
 import React, { useContext } from "react"
 import styled from "styled-components"
-// import {AppContext} from '../pages/application'
 
 const StyledFlipBtnContainer = styled.button`
   border-radius: 24px;
@@ -37,7 +36,6 @@ const StyledFlipBtnContainer = styled.button`
     box-shadow: inset 0px 0px 6px 2px rgba(0, 0, 0, 0.4),
       inset 0px 0px 1px 1px rgba(0, 0, 0, 0.4),
       inset -5px -2px 5px 0 rgba(0, 0, 0, 1);
-    color: pink;
     background: linear-gradient(
       90deg,
       #4c4c24 5%,
