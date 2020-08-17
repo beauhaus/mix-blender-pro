@@ -8,29 +8,17 @@ const StyledTopNav = styled.button`
   border-radius: 24%;
   outline: none;
   border: none;
-  position: absolute; /*TODO: temp */
+  ${"" /* position: absolute;
   right: 5vw;
-  top: 1.5vh;
+  top: 1.5vh; */}
+  position: relative;
   width: 10vh;
   height: 10vh;
-  background: linear-gradient(135deg, #fff 5%, #000 50%, #fff 100%);
-  box-shadow: inset -0.6vh -0.8vh 0.1vh 0 #000,
-    0.4vh 0.4vh 4px 0 rgba(0, 0, 0, 0.5), inset 0.4vh 0.4vh 0.5vh 0 #fff;
+  background: linear-gradient(150deg, #fff 45%, #000 55%);
+  ${"" /*   0.4vh 0.4vh 4px 0 rgba(0, 0, 0, 0.5), inset 0.4vh 0.4vh 0.5vh 0 #fff; */}
   display: grid;
   place-items: center;
-
-  &::before {
-    content: "";
-    border-radius: inherit;
-    box-shadow: -0.3vh -0.3vh 0.2vh 0.2vh #000, 0.2vh 0.2vh 0.4vh 0.2vh #fff;
-    position: absolute;
-    z-index: 1;
-    top: 1vh;
-    left: 1vh;
-    width: 8vh;
-    height: 8vh;
-    ${"" /* outline: 1px solid hsla(19, 100%, 62%, 0.643); */}
-  }
+  ${"" /* outline: 1px solid yellow; */}
 
   a {
     position: absolute;

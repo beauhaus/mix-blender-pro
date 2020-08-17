@@ -8,16 +8,18 @@ const StyledFlipBtnContainer = styled.button`
   position: relative;
   width: 48vw;
   height: 20vh;
-  background: linear-gradient(135deg, #fff 10%, #fff 40%, #000 60%, #fff 80%);
-  box-shadow: inset -6px -5px 3px 0px #000, 1px 1px 3px 0 rgba(0, 0, 0, 0),
-    inset 4px 3px 3px 0px #fff;
+  background: linear-gradient(150deg, #fff 45%, #000 55%);
+
   display: grid;
   place-items: center;
   &::before {
     content: "";
     border-radius: 20px;
-    box-shadow: 3px 2px 2px 0 #fff, -2px -2px 2px 1px #000;
-    position: relative;
+    box-shadow: 0 2px 2px 1px #fff, inset 0 2px 2px 1px #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 1;
     width: 92%;
     height: 90%;
@@ -31,11 +33,10 @@ const StyledFlipBtnContainer = styled.button`
     transform: translate(-50%, -50%);
     z-index: 3;
     margin: 0;
-    ${"" /* border: 1px solid #fff; */}
-    width: 92.5%;
-    height: 89%;
+    border: 1px solid #000;
+    width: 92%;
+    height: 88%;
     border-radius: 18px;
-    box-shadow: 0 -2px 2px 0px #000, inset -2px -2px 7px 0px #000;
     background: linear-gradient(
       90deg,
       #000 0%,
