@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 const StyledCycleBtnContainer = styled.div`
   width: 48vw;
-  height: 48vw;
+
   border: 1px solid fuchsia;
   margin: auto;
   display: grid;
@@ -12,7 +12,7 @@ const StyledCycleBtnContainer = styled.div`
   span {
     border: 2px solid #fff;
     border-radius: 50%;
-    width: 100%;
+    width: 48vw;
     height: 100%;
     margin: auto;
     background: brown;

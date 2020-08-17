@@ -7,25 +7,24 @@ const StyledFlipBtnContainer = styled.button`
   border: none;
   position: relative;
   width: 48vw;
-  height: 100%;
-
-  background: linear-gradient(135deg, #000 0%, #fff 25%, #000 70%, #fff 90%);
-  box-shadow: inset -7px -7px 8px 0px #000, 1px 1px 3px 0 #000,
-    inset 4px 4px 6px 0px #fff;
+  height: 20vh;
+  background: linear-gradient(135deg, #fff 10%, #fff 40%, #000 60%, #fff 80%);
+  box-shadow: inset -6px -5px 3px 0px #000, 1px 1px 3px 0 rgba(0, 0, 0, 0),
+    inset 4px 3px 3px 0px #fff;
   display: grid;
   place-items: center;
   &::before {
     content: "";
-    border-radius: 18px;
-    box-shadow: 6px 5px 4px 0px #fff;
-    position: absolute;
+    border-radius: 20px;
+    box-shadow: 3px 2px 2px 0 #fff, -2px -2px 2px 1px #000;
+    position: relative;
     z-index: 1;
-    top: 7.2%;
-    left: 6%;
-    width: 88%;
-    height: 85%;
+    width: 92%;
+    height: 90%;
+    ${"" /* background: lightgreen; */}
   }
   & > div {
+    ${"" /* display: none; */}
     position: absolute;
     top: 50%;
     left: 50%;
@@ -33,11 +32,10 @@ const StyledFlipBtnContainer = styled.button`
     z-index: 3;
     margin: 0;
     ${"" /* border: 1px solid #fff; */}
-    width: 90%;
-    height: 86%;
+    width: 92.5%;
+    height: 89%;
     border-radius: 18px;
-    box-shadow: 0 -2px 2px 0px #000, inset -2px -2px 7px 0px #000,
-      -2px 0 6px 0px rgba(0, 0, 0, 1);
+    box-shadow: 0 -2px 2px 0px #000, inset -2px -2px 7px 0px #000;
     background: linear-gradient(
       90deg,
       #000 0%,
