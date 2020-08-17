@@ -31,7 +31,10 @@ const StyledTopNav = styled.button`
   }
   a {
     opacity: 1;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background: linear-gradient(
       180deg,
       var(--btn-4) 0%,
