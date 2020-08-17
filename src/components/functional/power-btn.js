@@ -22,7 +22,7 @@ const StyledTopNav = styled.button`
   &::before {
     content: "";
     border-radius: inherit;
-    box-shadow: -0.5vh -0.4vh 0.4vh 0 #000, 0.6vh 0.6vh 0.5vh 0 #fff;
+    box-shadow: -0.3vh -0.3vh 0.2vh 0.2vh #000, 0.2vh 0.2vh 0.4vh 0.2vh #fff;
     position: absolute;
     z-index: 1;
     top: 1vh;
@@ -49,12 +49,12 @@ const StyledTopNav = styled.button`
     height: 8vh;
     border-radius: 22%;
     box-shadow: inset 0px 0px 6px 1px rgba(0, 0, 0, 0.4),
-      inset 0px 0px 1px 1px rgba(0, 0, 0, 0.4);
+      inset 0px 0px 0.5px 0.5px rgba(0, 0, 0, 0.4);
     color: transparent;
   }
 
   &.blender-on a {
-    border-radius: 18%;
+    border-radius: 22%;
 
     &::before {
       content: "";
@@ -75,20 +75,20 @@ const StyledTopNav = styled.button`
     &::after {
       content: "";
       border-radius: 40%;
-      width: 8.8vh;
-      height: 8.5vh;
+      width: 8vh;
+      height: 8vh;
       background: transparent;
-      filter: blur(6px);
+      filter: blur(8px);
       position: absolute;
       top: 0;
       left: 0;
       z-index: 4;
-      box-shadow: 0px 0 4px 8px var(--btn-3-on);
+      box-shadow: 0px 0 2px 10px var(--btn-3-on);
     }
   }
 
   &.blender-on .pwr-btn-icon path {
-    fill: #4d4d4d;
+    fill: #888;
     fill-opacity: 0.5;
     stroke: none;
   }
