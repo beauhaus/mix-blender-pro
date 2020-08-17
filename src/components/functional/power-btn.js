@@ -8,20 +8,30 @@ const StyledTopNav = styled.button`
   border-radius: 24%;
   outline: none;
   border: none;
-  ${"" /* position: absolute;
-  right: 5vw;
-  top: 1.5vh; */}
   position: relative;
   width: 10vh;
   height: 10vh;
-  background: linear-gradient(150deg, #fff 45%, #000 55%);
-  ${"" /*   0.4vh 0.4vh 4px 0 rgba(0, 0, 0, 0.5), inset 0.4vh 0.4vh 0.5vh 0 #fff; */}
+  ${"" /* background: linear-gradient(150deg, #fff 45%, #000 55%); */}
+  background: linear-gradient(135deg, #fff 40%, #000 60%);
+
   display: grid;
   place-items: center;
-  ${"" /* outline: 1px solid yellow; */}
-
-  a {
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.5);
+  &::before {
+    content: "";
+    border-radius: 20%;
+    box-shadow: -2px -2px 2px 0 #000, 2px 2px 2px 0px #fff;
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 85%;
+    height: 85%;
+  }
+  a {
+    opacity: 1;
+    position: relative;
     background: linear-gradient(
       180deg,
       var(--btn-4) 0%,
@@ -30,15 +40,12 @@ const StyledTopNav = styled.button`
       var(--btn-4) 80%,
       var(--btn-2) 100%
     );
-    z-index: 3;
-    top: 1vh;
-    left: 1vh;
-    width: 8vh;
-    height: 8vh;
-    border-radius: 22%;
+    z-index: 1;
+    width: 86%;
+    height: 86%;
+    border-radius: 20%;
     box-shadow: inset 0px 0px 6px 1px rgba(0, 0, 0, 0.4),
       inset 0px 0px 0.5px 0.5px rgba(0, 0, 0, 0.4);
-    color: transparent;
   }
 
   &.blender-on a {
@@ -71,7 +78,7 @@ const StyledTopNav = styled.button`
       top: 0;
       left: 0;
       z-index: 4;
-      box-shadow: 0px 0 2px 10px var(--btn-3-on);
+      box-shadow: 0px 0 2px 8px var(--btn-3-on);
     }
   }
 

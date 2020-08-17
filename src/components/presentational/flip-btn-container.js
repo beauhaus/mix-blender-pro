@@ -6,36 +6,34 @@ const StyledFlipBtnContainer = styled.button`
   outline: none;
   border: none;
   position: relative;
-  width: 48vw;
-  height: 20vh;
-  background: linear-gradient(150deg, #fff 45%, #000 55%);
+  background: linear-gradient(135deg, #fff 40%, #000 60%);
 
   display: grid;
   place-items: center;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.5);
+  width: 48vw;
+  height: 20vh;
+
   &::before {
     content: "";
     border-radius: 20px;
-    box-shadow: 0 2px 2px 1px #fff, inset 0 2px 2px 1px #000;
+    box-shadow: -3px -3px 2px 0 #000, 3px 3px 2px 0px #fff;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    width: 92%;
-    height: 90%;
-    ${"" /* background: lightgreen; */}
+    width: 94%;
+    height: 92%;
   }
   & > div {
-    ${"" /* display: none; */}
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 3;
     margin: 0;
-    border: 1px solid #000;
-    width: 92%;
-    height: 88%;
+    width: 94%;
+    height: 92%;
     border-radius: 18px;
     background: linear-gradient(
       90deg,
@@ -46,7 +44,8 @@ const StyledFlipBtnContainer = styled.button`
       #859a84 85%,
       #f3f1f1 100%
     );
-    filter: grayscale(50%);
+    box-shadow: inset 0 0 3px 1px #000;
+    filter: grayscale(30%);
   }
 `
 

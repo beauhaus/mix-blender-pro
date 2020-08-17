@@ -11,7 +11,7 @@ const StyledBlendControls = styled.div`
   height: 100%;
   margin: 0 3vw;
   display: flex;
-  border: 1px dashed navy;
+  ${"" /* border: 1px dashed navy; */}
 
   & button {
     margin: auto;
