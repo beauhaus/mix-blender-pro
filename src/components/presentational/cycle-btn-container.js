@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import styled from "styled-components"
-// import {AppContext} from '../pages/application'
+import IncrementorLights from "../functional/incrementor-lights"
 
 const StyledCycleBtnContainer = styled.div`
   height: 20vh;
@@ -11,11 +11,9 @@ const StyledCycleBtnContainer = styled.div`
   position: relative;
   overflow: visible;
   .cycle-btn {
-    grid-row: 1;
-    grid-column: 2;
     border-radius: 50%;
-    width: 22vh;
-    height: 22vh;
+    width: 22.5vh;
+    height: 22.5vh;
     background-image: conic-gradient(
       #fff,
       #fff,
@@ -44,8 +42,8 @@ const StyledCycleBtnContainer = styled.div`
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 85%;
-      height: 85%;
+      width: 82%;
+      height: 82%;
       box-shadow: -1px -1px 2px 0 #fff, 1px 1px 2px 0 #fff;
     }
   }
@@ -55,6 +53,7 @@ const CycleBtnContainer = props => {
   return (
     <StyledCycleBtnContainer className="cycle-btn-container">
       <div className="cycle-btn"></div>
+      <IncrementorLights />
     </StyledCycleBtnContainer>
   )
 }
