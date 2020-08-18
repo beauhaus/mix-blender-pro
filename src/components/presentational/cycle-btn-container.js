@@ -47,13 +47,24 @@ const StyledCycleBtnContainer = styled.div`
       box-shadow: -1px -1px 2px 0 #fff, 1px 1px 2px 0 #fff;
     }
   }
+  .incrementor-container {
+    width: 22.5vh;
+    height: 22.5vh;
+    ${"" /* border: 1px solid #fff; */}
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 `
 
 const CycleBtnContainer = props => {
   return (
     <StyledCycleBtnContainer className="cycle-btn-container">
       <div className="cycle-btn"></div>
-      <IncrementorLights />
+      <div className="incrementor-container">
+        <IncrementorLights />
+      </div>
     </StyledCycleBtnContainer>
   )
 }
