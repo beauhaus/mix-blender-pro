@@ -14,75 +14,29 @@ const StyledHeader = styled.header`
   max-width: 2200px;
   height: 12vh;
   z-index: 10;
-  padding-top: 1vh;
+  ${"" /* padding-top: 1vh; */}
   display: flex;
   justify-content: space-around;
   align-items: center;
+  .place-holder {
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    position: relative;
+    width: 10vh;
+    height: 10vh;
+    background: #91a999;
+    box-shadow: inset 0 2px 3px -1px rgba(255, 255, 255, 1),
+      inset 0 -1px 3px -1px rgba(0, 0, 0, 1);
+  }
 `
-
-// const StyledTestLink = styled.Link`
-// position: absolute;
-// top: 0;
-// left: 0;
-// color: #fff;
-// margin: 3vh;
-// width: 10vh;
-// height: auto;
-// border: 1px solid brown;
-// `
-// const TestLink = () => (
-//   <Link className="test-link" to="/test-page">
-//     TEST
-//   </Link>
-// )
-// const HomeLink = styled.Link`
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   mix-mode: multiply;
-//   height: 10vh;
-//   width: 10vh;
-
-//   z-index: 20;
-//   mix-blend-mode: color-burn;
-// `
-// const HomeLink = () => {
-//   const data = useStaticQuery(graphql`
-//     {
-//       file: allFile(
-//         filter: {
-//           sourceInstanceName: { eq: "util-images" }
-//           name: { eq: "appicon_512x512" }
-//         }
-//       ) {
-//         nodes {
-//           sharp: childImageSharp {
-//             fluid {
-//               ...GatsbyImageSharpFluid_withWebp_tracedSVG
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `)
-//   const appIcon = data.file.nodes[0].sharp.fluid
-
-//   return (
-//     <Link to="/" className="home-link" activeClassName="active-home">
-//       <Img
-//         fluid={appIcon}
-//         alt="application icon of a blending of colors in swirl shape"
-//       />
-//     </Link>
-//   )
-// }
 const Header = () => {
   return (
     <>
-      {/* <HomeLink /> */}
-
       <Link to="/test-page"></Link>
       <StyledHeader className="header-wrapper">
+        <span className="place-holder"></span>
+        <span className="place-holder"></span>
         <PowerBtn />
       </StyledHeader>
     </>

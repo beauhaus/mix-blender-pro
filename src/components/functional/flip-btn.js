@@ -29,6 +29,13 @@ const StyledFlipBtn = styled.button`
     top: 0;
     left: 0;
   }
+  .lines {
+            fill:none;
+            stroke:#7FB0E4;
+            stroke-width:1;
+            mix-blend-mode: overlay;
+            overflow: hidden;
+         }
 `
 
 const FlipLinedGrid = () => (
@@ -41,7 +48,7 @@ const FlipLinedGrid = () => (
     overflow="hidden"
     preserveAspectRatio="none"
   >
-    <FlipArrows />
+    {/* <FlipArrows /> */}
     <g className="lines">
       <path d="M37.5 0v300" className="st1" />
       <path d="M74.5 0v300" className="st1" />

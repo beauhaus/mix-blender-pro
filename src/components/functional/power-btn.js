@@ -5,6 +5,7 @@ import { NavContext } from "./layout"
 
 import PwrBtnIcon from "../presentational/icon-components/power-btn-icon"
 const StyledTopNav = styled.button`
+  ${"" /* margin: 0 3%; */}
   border-radius: 24%;
   outline: none;
   border: none;

@@ -1,10 +1,9 @@
 import React, { useContext } from "react"
 import styled from "styled-components"
-import IncrementorLights from "../functional/incrementor-lights"
-
+import IncrementorLights from "../presentational/incrementor-lights"
+import ModeIcons from "./mode-icons-manager"
 const StyledCycleBtnContainer = styled.div`
   height: 20vh;
-  ${"" /* border: 1px solid fuchsia; */}
   margin: auto;
   display: grid;
   place-items: center;
@@ -32,10 +31,9 @@ const StyledCycleBtnContainer = styled.div`
     transform: translate(-50%, -50%);
 
     &::before {
-      ${"" /* display: none; */}
       content: "";
       border-radius: 50%;
-      background: #000;
+      background: transparent;
       z-index: 2;
       position: absolute;
       margin: auto;
@@ -47,24 +45,15 @@ const StyledCycleBtnContainer = styled.div`
       box-shadow: -1px -1px 2px 0 #fff, 1px 1px 2px 0 #fff;
     }
   }
-  .incrementor-container {
-    width: 22.5vh;
-    height: 22.5vh;
-    ${"" /* border: 1px solid #fff; */}
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
 `
 
 const CycleBtnContainer = props => {
   return (
     <StyledCycleBtnContainer className="cycle-btn-container">
-      <div className="cycle-btn"></div>
-      <div className="incrementor-container">
+      <button className="cycle-btn" onClick={() => console.log("click")}>
         <IncrementorLights />
-      </div>
+        <ModeIcons />
+      </button>
     </StyledCycleBtnContainer>
   )
 }

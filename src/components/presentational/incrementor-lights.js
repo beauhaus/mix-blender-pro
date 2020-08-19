@@ -5,8 +5,8 @@ const IncrementWrapper = styled.svg`
   ${"" /* width: 1 */}
   ${"" /* height: 1 */}
   z-index: 4;
-  ${"" /* mix-blend-mode: hard-light; */}
-  opacity: 0.8;
+  mix-blend-mode: difference;
+  opacity: 1;
   .st2 {
     fill: #ffc59b;
   }
@@ -28,6 +28,9 @@ const Incrementor = () => {
       viewBox="26 26 348 348"
       //   preserveAspectRatio="none"
     >
+      <filter id="inc-blurFilter" y="-5" x="-10" height="40" width="60">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="7" />
+      </filter>
       <path
         d="M311.09 302.57c7.64-8.32 14.35-17.49 19.93-27.26l11.92 6.14c-6.27 10.98-13.83 21.26-22.47 30.55l-9.38-9.43z"
         className="st2"
