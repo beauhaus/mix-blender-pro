@@ -13,15 +13,6 @@ const StyledCycleBtnContainer = styled.div`
     border-radius: 50%;
     width: 22.5vh;
     height: 22.5vh;
-    ${"" /* background-image: conic-gradient(
-      #3e3e3e,
-      #fff 45deg,
-      #000 135deg,
-      #3e3e3e 180deg,
-      #fff 225deg,
-      #000 315deg,
-      #3e3e3e
-    ); */}
     background: linear-gradient(135deg, #000 20%, #fff 50%, #000 80%);
     box-shadow: inset 2px 2px 4px 0 #eee, inset -2px -2px 5px 0 #444,
       3px 3px 3px 0 rgba(0, 0, 0, 0.8);
@@ -43,6 +34,27 @@ const StyledCycleBtnContainer = styled.div`
       width: 82%;
       height: 82%;
       box-shadow: -1px -1px 2px 0 #fff, 1px 1px 2px 0 #fff;
+    }
+    &:hover {
+      ${"" /* outline: 2px solid blue; */}
+      ${"" /* box-shadow: inset 0 0 5px 2px red; */}
+    }
+    &:active {
+      &::before {
+        content: "";
+        border-radius: 50%;
+        background: transparent;
+        z-index: 2;
+        position: absolute;
+        margin: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 82%;
+        height: 82%;
+        box-shadow: inset 0 0 10px 0 #fecf67, -1px -1px 2px 0 #fff,
+          1px 1px 2px 0 #fff;
+      }
     }
   }
 `

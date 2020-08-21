@@ -3,21 +3,21 @@ import styled from "styled-components"
 // import {AppContext} from '../pages/application'
 
 import NormalIcon from "../../presentational/mode-icons/normal"
-// import ScreenIcon from './mode-icons/screen'
-// import LightenIcon from './mode-icons/lighten'
-// import DarkenIcon from './mode-icons/darken'
-// import MultiplyIcon from './mode-icons/multiply'
-// import OverlayIcon from './mode-icons/overlay'
-// import SoftLightIcon from './mode-icons/soft-light';
-// import ExclusionIcon from './mode-icons/exclusion'
-// import DifferenceIcon from './mode-icons/difference'
-// import ColorIcon from './mode-icons/color'
-// import HardLightIcon from './mode-icons/hard-light';
-// import LuminosityIcon from './mode-icons/luminosity';
-// import ColorBurnIcon from './mode-icons/color-burn';
-// import ColorDodgeIcon from './mode-icons/color-dodge';
-// import SaturationIcon from './mode-icons/saturation';
-// import HueIcon from './mode-icons/hue';
+import MultiplyIcon from "../../presentational/mode-icons/multiply"
+import ScreenIcon from "../../presentational/mode-icons/screen"
+// import LightenIcon from '../../presentational/mode-icons/lighten'
+// import DarkenIcon from '../../presentational/mode-icons/darken'
+// import OverlayIcon from '../../presentational/mode-icons/overlay'
+// import SoftLightIcon from '../../presentational/mode-icons/soft-light';
+// import ExclusionIcon from '../../presentational/mode-icons/exclusion'
+// import DifferenceIcon from '../../presentational/mode-icons/difference'
+// import ColorIcon from '../../presentational/mode-icons/color'
+// import HardLightIcon from '../../presentational/mode-icons/hard-light';
+// import LuminosityIcon from '../../presentational/mode-icons/luminosity';
+// import ColorBurnIcon from '../../presentational/mode-icons/color-burn';
+// import ColorDodgeIcon from '../../presentational/mode-icons/color-dodge';
+// import SaturationIcon from '../../presentational/mode-icons/saturation';
+// import HueIcon from '../../presentational/mode-icons/hue';
 
 const ModeIconsGroup = styled.svg`
   position: absolute;
@@ -42,10 +42,10 @@ const ModeIcons = () => {
     switch (param) {
       case 0:
         return <NormalIcon />
-      // case 1:
-      //   return <MultiplyIcon />
-      // case 2:
-      //   return <ScreenIcon />
+      case 1:
+        return <MultiplyIcon />
+      case 2:
+        return <ScreenIcon />
       // case 3:
       //   return <OverlayIcon />
       // case 4:
@@ -87,7 +87,7 @@ const ModeIcons = () => {
         r="212"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stopColor="#fff" stopOpacity=".3" />
+        <stop offset="0" stopColor="#fff" stopOpacity=".5" />
         <stop offset="1" stopColor="#fff" stopOpacity="0" />
       </radialGradient>
       <radialGradient
@@ -98,7 +98,7 @@ const ModeIcons = () => {
         gradientTransform="rotate(180 150 150)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stopOpacity=".4" />
+        <stop offset="0" stopOpacity=".6" />
         <stop offset="1" stopOpacity="0" />
       </radialGradient>
       <g className="btn-cover">
