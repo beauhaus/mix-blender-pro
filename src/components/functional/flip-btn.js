@@ -48,7 +48,7 @@ const FlipLinedGrid = () => (
     overflow="hidden"
     preserveAspectRatio="none"
   >
-    {/* <FlipArrows /> */}
+    <FlipArrows />
     <g className="lines">
       <path d="M37.5 0v300" className="st1" />
       <path d="M74.5 0v300" className="st1" />

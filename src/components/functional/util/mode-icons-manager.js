@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import styled from "styled-components"
 // import {AppContext} from '../pages/application'
 
-import NormalIcon from "../presentational/mode-icons/normal"
+import NormalIcon from "../../presentational/mode-icons/normal"
 // import ScreenIcon from './mode-icons/screen'
 // import LightenIcon from './mode-icons/lighten'
 // import DarkenIcon from './mode-icons/darken'

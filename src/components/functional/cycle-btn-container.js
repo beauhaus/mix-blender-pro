@@ -1,7 +1,7 @@
-import React, { useContext } from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import IncrementorLights from "../presentational/incrementor-lights"
-import ModeIcons from "./mode-icons-manager"
+import ModeIcons from "./util/mode-icons-manager"
 const StyledCycleBtnContainer = styled.div`
   height: 20vh;
   margin: auto;
@@ -13,18 +13,18 @@ const StyledCycleBtnContainer = styled.div`
     border-radius: 50%;
     width: 22.5vh;
     height: 22.5vh;
-    background-image: conic-gradient(
-      #fff,
-      #fff,
-      #000,
-      #fff,
-      #000,
-      #fff,
-      #000,
-      #000,
-      #fff
-    );
-    box-shadow: inset 2px 2px 4px 0 #eee, inset -2px -2px 5px 0 #444;
+    ${"" /* background-image: conic-gradient(
+      #3e3e3e,
+      #fff 45deg,
+      #000 135deg,
+      #3e3e3e 180deg,
+      #fff 225deg,
+      #000 315deg,
+      #3e3e3e
+    ); */}
+    background: linear-gradient(135deg, #000 20%, #fff 50%, #000 80%);
+    box-shadow: inset 2px 2px 4px 0 #eee, inset -2px -2px 5px 0 #444,
+      3px 3px 3px 0 rgba(0, 0, 0, 0.8);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -48,10 +48,12 @@ const StyledCycleBtnContainer = styled.div`
 `
 
 const CycleBtnContainer = props => {
+  const [testCount, setTestCount] = useState(0)
+  const testCounter = () => setTestCount(testCount + 1)
   return (
     <StyledCycleBtnContainer className="cycle-btn-container">
-      <button className="cycle-btn" onClick={() => console.log("click")}>
-        <IncrementorLights />
+      <button className="cycle-btn" onClick={testCounter}>
+        <IncrementorLights count={testCount} />
         <ModeIcons />
       </button>
     </StyledCycleBtnContainer>
