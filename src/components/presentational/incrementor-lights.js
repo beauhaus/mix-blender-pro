@@ -2,42 +2,40 @@ import React from "react"
 import styled from "styled-components"
 const IncrementWrapper = styled.svg`
   position: relative;
-  z-index: 4;
+  z-index: 1;
   .inc-lights {
     .inc-light-off {
-      fill: var(--orange-dk);
-      stroke: var(--ice-blue);
-      stroke: #444;
+      fill: var(--ice-blue);
+      ${"" /* stroke: #444; */}
       stroke-width: 0;
     }
     .inc-light-on {
       opacity: 0;
-      fill: var(--yellow-lt);
+      fill: #bdecfe;
       ${"" /* fill: #000; */}
       stroke-width: 1;
 
       stroke: #faa91f;
 
-      -webkit-animation: fadeIn 800ms ease-in forwards;
-      animation: fadeIn 800ms ease-in forwards;
+      -webkit-animation: fadeIn 600ms ease-in forwards;
+      animation: fadeIn 600ms ease-in forwards;
     }
   }
   .glow-lights {
     opacity: 0;
     filter: url(#inc-blur-filter);
-    fill: var(--yellow-lt);
-    fill: #faa91f;
-    fill: #fff;
+    ${"" /* fill: #bdecfe;
+    fill: #faa91f; */}
+    fill: #B5EAFF;
     stroke-width: 3;
-    stroke: var(--yellow-lt);
 
     stroke: #faa91f;
+    stroke: #bdecfe;
     -webkit-animation: fadeIn 300ms ease-in forwards;
     animation: fadeIn 300ms ease-in forwards;
   }
 `
-const Incrementor = ({ count }) => {
-  const mixModeNum = count
+const Incrementor = ({ mixModeNum }) => {
   return (
     <IncrementWrapper
       className="incrementor-lights"

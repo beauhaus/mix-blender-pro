@@ -1,7 +1,10 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import styled from "styled-components"
+import { ModeContext } from "../../pages/panel"
+
 import IncrementorLights from "../presentational/incrementor-lights"
 import ModeIcons from "./util/mode-icons-manager"
+
 const StyledCycleBtnContainer = styled.div`
   height: 20vh;
   margin: auto;
@@ -9,13 +12,13 @@ const StyledCycleBtnContainer = styled.div`
   place-items: center;
   position: relative;
   overflow: visible;
-  .cycle-btn {
+  .cycle-mode-btn {
     border-radius: 50%;
     width: 22.5vh;
     height: 22.5vh;
     background: linear-gradient(135deg, #000 20%, #fff 50%, #000 80%);
     box-shadow: inset 2px 2px 4px 0 #eee, inset -2px -2px 5px 0 #444,
-      3px 3px 3px 0 rgba(0, 0, 0, 0.8);
+      1px 1px 1px 0 rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -59,13 +62,25 @@ const StyledCycleBtnContainer = styled.div`
   }
 `
 
+// onTouchStart
+
 const CycleBtnContainer = props => {
-  const [testCount, setTestCount] = useState(0)
-  const testCounter = () => setTestCount(testCount + 1)
+  const { setMixMode, mixMode, setMixModeNum, mixModeNum } = useContext(
+    ModeContext
+  )
+
+  const modeSelectHandler = () => {
+    // setMixModeNum((mixModeNum + 1) % 16)
+    setMixModeNum((mixModeNum + 1) % 16)
+  }
   return (
     <StyledCycleBtnContainer className="cycle-btn-container">
-      <button className="cycle-btn" onClick={testCounter}>
-        <IncrementorLights count={testCount} />
+      <button
+        className="cycle-mode-btn"
+        aria-label="mode-cycler"
+        onClick={modeSelectHandler}
+      >
+        <IncrementorLights mixModeNum={mixModeNum} />
         <ModeIcons />
       </button>
     </StyledCycleBtnContainer>

@@ -1,29 +1,29 @@
 import React, { useContext } from "react"
 import styled from "styled-components"
-// import {AppContext} from '../pages/application'
+import { ModeContext } from "../../../pages/panel"
 
 import NormalIcon from "../../presentational/mode-icons/normal"
 import MultiplyIcon from "../../presentational/mode-icons/multiply"
 import ScreenIcon from "../../presentational/mode-icons/screen"
-// import LightenIcon from '../../presentational/mode-icons/lighten'
-// import DarkenIcon from '../../presentational/mode-icons/darken'
-// import OverlayIcon from '../../presentational/mode-icons/overlay'
-// import SoftLightIcon from '../../presentational/mode-icons/soft-light';
-// import ExclusionIcon from '../../presentational/mode-icons/exclusion'
-// import DifferenceIcon from '../../presentational/mode-icons/difference'
-// import ColorIcon from '../../presentational/mode-icons/color'
-// import HardLightIcon from '../../presentational/mode-icons/hard-light';
-// import LuminosityIcon from '../../presentational/mode-icons/luminosity';
-// import ColorBurnIcon from '../../presentational/mode-icons/color-burn';
-// import ColorDodgeIcon from '../../presentational/mode-icons/color-dodge';
-// import SaturationIcon from '../../presentational/mode-icons/saturation';
-// import HueIcon from '../../presentational/mode-icons/hue';
+import OverlayIcon from "../../presentational/mode-icons/overlay"
+import LightenIcon from "../../presentational/mode-icons/lighten"
+import DarkenIcon from "../../presentational/mode-icons/darken"
+import ColorIcon from "../../presentational/mode-icons/color"
+import ColorDodgeIcon from "../../presentational/mode-icons/color-dodge"
+import ColorBurnIcon from "../../presentational/mode-icons/color-burn"
+import DifferenceIcon from "../../presentational/mode-icons/difference"
+import ExclusionIcon from "../../presentational/mode-icons/exclusion"
+import LuminosityIcon from "../../presentational/mode-icons/luminosity"
+import HueIcon from "../../presentational/mode-icons/hue"
+import SaturationIcon from "../../presentational/mode-icons/saturation"
+import SoftLightIcon from "../../presentational/mode-icons/soft-light"
+import HardLightIcon from "../../presentational/mode-icons/hard-light"
 
 const ModeIconsGroup = styled.svg`
   position: absolute;
   top: 10%;
   left: 10%;
-  z-index: 1;
+  z-index: 3;
   overflow: visible;
   width: 80%;
   height: 80%;
@@ -35,8 +35,7 @@ const ModeIconsGroup = styled.svg`
   }
 `
 const ModeIcons = () => {
-  // const { mixModeNum } = useContext(AppContext)
-  let mixModeNum = 0 //TODO: deprecate
+  const { mixModeNum } = useContext(ModeContext)
 
   const renderIcon = param => {
     switch (param) {
@@ -46,32 +45,32 @@ const ModeIcons = () => {
         return <MultiplyIcon />
       case 2:
         return <ScreenIcon />
-      // case 3:
-      //   return <OverlayIcon />
-      // case 4:
-      //   return <LightenIcon />
-      // case 5:
-      //   return <DarkenIcon />
-      // case 6:
-      //   return <ColorIcon />
-      // case 7:
-      //   return <ColorDodgeIcon />
-      // case 8:
-      //   return <ColorBurnIcon />
-      // case 9:
-      //   return <DifferenceIcon />
-      // case 10:
-      //   return <ExclusionIcon />
-      // case 11:
-      //   return <LuminosityIcon />
-      // case 12:
-      //   return <HueIcon />
-      // case 13:
-      //   return <SaturationIcon />
-      // case 14:
-      //   return <SoftLightIcon />
-      // case 15:
-      //   return <HardLightIcon />
+      case 3:
+        return <OverlayIcon />
+      case 4:
+        return <LightenIcon />
+      case 5:
+        return <DarkenIcon />
+      case 6:
+        return <ColorIcon />
+      case 7:
+        return <ColorDodgeIcon />
+      case 8:
+        return <ColorBurnIcon />
+      case 9:
+        return <DifferenceIcon />
+      case 10:
+        return <ExclusionIcon />
+      case 11:
+        return <LuminosityIcon />
+      case 12:
+        return <HueIcon />
+      case 13:
+        return <SaturationIcon />
+      case 14:
+        return <SoftLightIcon />
+      case 15:
+        return <HardLightIcon />
       default:
         break
     }
@@ -98,7 +97,7 @@ const ModeIcons = () => {
         gradientTransform="rotate(180 150 150)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stopOpacity=".6" />
+        <stop offset="0" stopOpacity=".4" />
         <stop offset="1" stopOpacity="0" />
       </radialGradient>
       <g className="btn-cover">

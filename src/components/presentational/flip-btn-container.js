@@ -12,7 +12,7 @@ const StyledFlipBtnContainer = styled.div`
 
   display: grid;
   place-items: center;
-  box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.5);
   width: 48vw;
   height: 20vh;
 

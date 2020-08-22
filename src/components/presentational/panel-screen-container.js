@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const StyledScrnContainer = styled.div`
-  background: #fff;
+  background: linear-gradient(45deg, #bcbcbc 0%, #8d8d8d 100%);
   grid-row: 2;
   border-radius: 10px;
   position: relative;

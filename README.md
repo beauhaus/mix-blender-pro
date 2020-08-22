@@ -7,6 +7,8 @@ First functioning prototype of CSS Blendr (3 weeks)
 
 ---
 
+npm i @mdx-js/mdx @mdx-js/react gatsby-plugin-mdx
+
 "@mdx-js/mdx": "^1.6.1"
 
 "@mdx-js/react": "^1.6.1"
@@ -40,3 +42,13 @@ First functioning prototype of CSS Blendr (3 weeks)
 for future ref getting \_withWebP
 
 const data = useStaticQuery(graphql`{ file: allFile(filter: {sourceInstanceName: {eq: "util-images"}, name: {eq: "bgnoise"}}) { nodes { sharp: childImageSharp { fluid { ...GatsbyImageSharpFluid_withWebp } } } } }`)
+
+/_Context Notes _/
+
+MixMode Context
+effects 4 things:
+
+main img display
+article
+btn icon
+Mode label

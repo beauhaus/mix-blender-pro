@@ -1,76 +1,42 @@
-import React, { useContext } from "react"
+import React, { useState, createContext, useEffect } from "react"
 import styled from "styled-components"
+import TestSub from "../components/test-sub-comp"
 // import {AppContext} from '../pages/application'
 
+export const TestContext = createContext()
+
 const StyledTestPage = styled.div`
-  svg {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+  background: whitesmoke;
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  .test-sub {
+    width: 75vw;
+    height: 75vh;
+    border: 2px solid #888;
+    box-shadow: 2px 2px 2px 0 #000;
+    background: wheat;
+    h1 {
+      margin: 20vh auto;
+    }
   }
 `
 
 const TestPage = props => {
+  const [testState, setTestState] = useState(0)
+  useEffect(() => {
+    setTestState({
+      mode: "normal",
+      num: 15,
+    })
+  }, [])
   return (
-    <StyledTestPage className="TestPage">
-      <svg
-        className="svg2"
-        viewBox="0 0 600 1200"
-        xmlnsXlink="http://www.w3.org/1999/xlink"
-        preserveAspectRatio="none"
-      >
-        <radialGradient
-          id="grad"
-          cx="300"
-          cy="600"
-          r="943.825"
-          gradientTransform="matrix(-.1409 .99 -.5472 -.0779 670.614 349.727)"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop offset="0" stopColor="#fceec3" />
-          <stop offset=".216" stopColor="#f7e7b2" />
-          <stop offset=".407" stopColor="#f6e3a9" />
-          <stop offset=".67" stopColor="#f9d786" />
-          <stop offset="1" stopColor="#e7aa3c" />
-        </radialGradient>
-        <defs>
-          <filter id="roughpaper">
-            <feTurbulence
-              type="turbulence"
-              baseFrequency="0.34"
-              result="noise"
-              numOctaves="1"
-            />
-            <feDiffuseLighting
-              in="noise"
-              lightingColor="#fff"
-              surfaceScale="2.5"
-              result="light"
-            >
-              <feDistantLight azimuth="150" elevation="150" />
-            </feDiffuseLighting>
-
-            <feBlend in="SourceGraphic" mode="screen" />
-          </filter>
-          <filter id="blend">
-            <feBlend in="SourceGraphic" mode="screen" />
-          </filter>
-          <symbol id="rect-temp">
-            <rect width="110%" height="110%" />
-          </symbol>
-        </defs>
-        <use xlinkHref="#rect-temp" filter="url(#roughpaper)" />
-        <use
-          className="card"
-          xlinkHref="#rect-temp"
-          width="100%"
-          height="100%"
-          filter="url(#blend)"
-          fill="url(#grad)"
-          fillOpacity="0.4"
-        />
-      </svg>
-    </StyledTestPage>
+    <TestContext.Provider value={{ testState }}>
+      <StyledTestPage className="TestPage">
+        <TestSub />
+      </StyledTestPage>
+    </TestContext.Provider>
   )
 }
 
