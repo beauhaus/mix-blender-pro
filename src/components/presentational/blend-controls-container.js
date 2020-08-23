@@ -1,4 +1,4 @@
-import React from "react"
+import React, { memo } from "react"
 import styled from "styled-components"
 // import CycleModeBtn from "./cyclemodebtn";
 // import FlipImageBtn from "./flipimagebtn";
@@ -16,10 +16,11 @@ const StyledBlendControls = styled.div`
 const BlendControls = () => {
   return (
     <StyledBlendControls className="blend-controls">
+      {console.log("blendCtrls ran")}
       <FlipBtnContainer />
       <CycleBtnContainer />
     </StyledBlendControls>
   )
 }
 
-export default BlendControls
+export default memo(BlendControls)

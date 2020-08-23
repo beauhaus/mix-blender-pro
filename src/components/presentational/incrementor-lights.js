@@ -1,4 +1,4 @@
-import React from "react"
+import React, { memo } from "react"
 import styled from "styled-components"
 const IncrementWrapper = styled.svg`
   position: relative;
@@ -42,6 +42,7 @@ const Incrementor = ({ mixModeNum }) => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="26 26 348 348"
     >
+      {console.log("inc lights ran")}
       <filter id="inc-blur-filter" y="-5" x="-10" height="358" width="368">
         <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
       </filter>
@@ -158,4 +159,4 @@ const Incrementor = ({ mixModeNum }) => {
   )
 }
 
-export default Incrementor
+export default memo(Incrementor)

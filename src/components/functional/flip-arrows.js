@@ -24,6 +24,7 @@ const StyledArrows = styled.g`
 const FlipArrows = () => {
   return (
     <StyledArrows>
+      {console.log("arrows ran")}
       <filter id="arrow-glow-blur">
         <feGaussianBlur stdDeviation="6"></feGaussianBlur>
       </filter>

@@ -22,7 +22,7 @@ export const ModeContext = createContext()
 
 const PanelPage = () => {
   const mixModesArray = useMdx()
-
+  const [modesArray, setModesArray] = useState(mixModesArray)
   const [mixModeNum, setMixModeNum] = useState(0)
   const [mixMode, setMixMode] = useState("normal")
 
@@ -45,10 +45,10 @@ const PanelPage = () => {
         mixMode,
         setMixModeNum,
         mixModeNum,
+        modesArray,
       }}
     >
       <StyledPanelPage>
-        {console.log("MMNum:", mixModeNum)}
         <BGTexture />
         <PanelScrnContainer />
         <BlendCtrlsContainer />
@@ -75,21 +75,3 @@ const useMdx = () => {
 // const test = useMdx()
 // console.log("arr: ", test)
 export default PanelPage
-// const modeObjTemp = [
-//   { num: 0, name: "Normal" },
-//   { num: 1, name: "Multiply" },
-//   { num: 2, name: "Screen" },
-//   { num: 3, name: "Overlay" },
-//   { num: 4, name: "Lighten" },
-//   { num: 5, name: "Darken" },
-//   { num: 6, name: "Color" },
-//   { num: 7, name: "ColorDodge" },
-//   { num: 8, name: "ColorBurn" },
-//   { num: 9, name: "Difference" },
-//   { num: 10, name: "Exclusion" },
-//   { num: 11, name: "Luminosity" },
-//   { num: 12, name: "Hue" },
-//   { num: 13, name: "Saturation" },
-//   { num: 14, name: "SoftLight" },
-//   { num: 15, name: "HardLight" },
-// ]

@@ -16,7 +16,7 @@ const StyledCycleBtnContainer = styled.div`
     border-radius: 50%;
     width: 22.5vh;
     height: 22.5vh;
-    background: linear-gradient(135deg, #000 20%, #fff 50%, #000 80%);
+    background: linear-gradient(45deg, #000 20%, #fff 50%, #000 80%);
     box-shadow: inset 2px 2px 4px 0 #eee, inset -2px -2px 5px 0 #444,
       1px 1px 1px 0 rgba(0, 0, 0, 0.5);
     position: absolute;
@@ -47,7 +47,7 @@ const StyledCycleBtnContainer = styled.div`
         content: "";
         border-radius: 50%;
         background: transparent;
-        z-index: 2;
+        z-index: 12;
         position: absolute;
         margin: auto;
         top: 50%;
@@ -65,12 +65,15 @@ const StyledCycleBtnContainer = styled.div`
 // onTouchStart
 
 const CycleBtnContainer = props => {
-  const { setMixMode, mixMode, setMixModeNum, mixModeNum } = useContext(
-    ModeContext
-  )
+  const {
+    setMixMode,
+    mixMode,
+    modesArray,
+    setMixModeNum,
+    mixModeNum,
+  } = useContext(ModeContext)
 
   const modeSelectHandler = () => {
-    // setMixModeNum((mixModeNum + 1) % 16)
     setMixModeNum((mixModeNum + 1) % 16)
   }
   return (

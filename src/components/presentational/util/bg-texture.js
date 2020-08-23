@@ -1,4 +1,4 @@
-import React from "react"
+import React, { memo } from "react"
 import styled from "styled-components"
 
 const NoiseBGWrap = styled.div`
@@ -25,6 +25,7 @@ const NoiseBGWrap = styled.div`
 const NoiseBG = () => {
   return (
     <NoiseBGWrap className="noise-bg-container">
+      {console.log("noise ran")}
       <svg
         width="100%"
         className="bg-texture"
@@ -91,4 +92,4 @@ const NoiseBG = () => {
   )
 }
 
-export default NoiseBG
+export default memo(NoiseBG)
