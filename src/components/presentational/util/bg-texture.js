@@ -35,7 +35,7 @@ const NoiseBG = () => {
         <defs>
           <filter
             id="a"
-            colorInterpolationFilters="sRGB"
+            // colorInterpolationFilters="sRGB"
             width="120%"
             height="120%"
           >
