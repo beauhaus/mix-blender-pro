@@ -7,7 +7,6 @@ import { Helmet } from "react-helmet"
 import "./layout.scss"
 import Header from "./header"
 import useSiteMetadata from "./util/hooks/use-site-metadata"
-// import BGTexture from "../components/presentational/util/bg-texture"
 import BGTexture from "../presentational/util/bg-texture"
 export const NavContext = createContext()
 
@@ -63,14 +62,11 @@ const Layout = ({ children, location }) => {
           timeout={{ enter: 1500, exit: 1500 }}
         >
           {status => (
-            <StyledImgBackground
-              fluid={file.nodes[0].sharp.fluid}
-              className={`layout-wrapper page ${status}`}
-            >
-              {/* <BGTexture /> */}
+            <div className={`layout-wrapper page ${status}`}>
+              <BGTexture />
               {console.log("layout ran")}
               {children}
-            </StyledImgBackground>
+            </div>
           )}
         </Transition>
       </TransitionGroup>
@@ -78,4 +74,11 @@ const Layout = ({ children, location }) => {
   )
 }
 
+{
+  /* <StyledImgBackground
+fluid={file.nodes[0].sharp.fluid}
+className={`layout-wrapper page ${status}`}
+>
+</StyledImgBackground> */
+}
 export default Layout

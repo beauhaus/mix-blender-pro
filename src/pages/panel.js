@@ -50,7 +50,7 @@ const PanelPage = () => {
     >
       <StyledPanelPage>
         {console.log("panelpage ran")}
-        {/* <BGTexture /> */}
+        <BGTexture />
         <PanelScrnContainer />
         <BlendCtrlsContainer />
         <ModeArticle />

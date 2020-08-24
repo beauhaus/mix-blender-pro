@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 
 const NoiseBGWrap = styled.div`
@@ -23,6 +23,13 @@ const NoiseBGWrap = styled.div`
 `
 
 const NoiseBG = () => {
+  const [hasMounted, setHasMounted] = useState(false)
+  useEffect(() => {
+    setHasMounted(true)
+  }, [])
+  if (!hasMounted) {
+    return null
+  }
   return (
     <NoiseBGWrap className="noise-bg-container">
       {console.log("noise ran")}
