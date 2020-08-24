@@ -16,7 +16,7 @@ const StyledImgBackground = styled(BackgroundImage)`
   background-size: contain;
   background-repeat: repeat-y;
   background-height: 100vh;
-
+  background-color: black;
   background-position: top 0% center;
   display: grid;
   grid-template-columns: 100vw;
@@ -38,14 +38,14 @@ const PanelPage = () => {
   }, [mixModeNum])
 
   // secures proper rehydration
-  const [hasMounted, setHasMounted] = useState(false)
+  // const [hasMounted, setHasMounted] = useState(false)
 
-  useEffect(() => {
-    setHasMounted(true)
-  }, [])
-  if (!hasMounted) {
-    return null
-  }
+  // useEffect(() => {
+  //   setHasMounted(true)
+  // }, [])
+  // if (!hasMounted) {
+  //   return null
+  // }
 
   return (
     <ModeContext.Provider

@@ -10,16 +10,7 @@ import BGTexture from "../presentational/util/bg-texture"
 
 export const NavContext = createContext()
 
-// const StyledImgBackground = styled(BackgroundImage)`
-//   width: 100vw;
-//   background-size: cover;
-//   background-height: 100vh;
-//   background-position: top 50% center;
-// `
 const Layout = ({ children, location }) => {
-  // useEffect(() => {
-  //   if (location.pathname === "/") setFromLanding(true)
-  // }, [])
   const { title, description } = useSiteMetadata()
   // const [hasMounted, setHasMounted] = useState(false)
 
@@ -29,30 +20,6 @@ const Layout = ({ children, location }) => {
   // if (!hasMounted) {
   //   return null
   // }
-
-  // <StyledImgBackground
-  //             fluid={file.nodes[0].sharp.fluid}
-  //             className={`layout-wrapper page ${status}`}
-  //           >
-  // const { file } = useStaticQuery(graphql`
-  //   query {
-  //     file: allFile(
-  //       filter: {
-  //         sourceInstanceName: { eq: "util-images" }
-  //         name: { eq: "bg-orange2" }
-  //       }
-  //     ) {
-  //       nodes {
-  //         sharp: childImageSharp {
-  //           fluid {
-  //             ...GatsbyImageSharpFluid
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-  // console.log("data: ", file.nodes[0].sharp.fluid)
 
   return (
     <NavContext.Provider
