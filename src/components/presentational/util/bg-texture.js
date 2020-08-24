@@ -41,7 +41,7 @@ const NoiseBG = () => {
       >
         <defs>
           <filter
-            id="a"
+            id="brushed-steel-filter"
             // colorInterpolationFilters="sRGB"
             width="120%"
             height="120%"
@@ -73,7 +73,7 @@ const NoiseBG = () => {
           width="100%"
           height="100%"
           fill="var(--bg-texture)"
-          filter="url(#a)"
+          // filter="url(#brushed-steel-filter)"
         />
 
         <linearGradient
