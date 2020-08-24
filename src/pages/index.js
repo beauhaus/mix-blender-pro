@@ -18,7 +18,13 @@ const StyledImgBackground = styled(BackgroundImage)`
   background-size: contain;
   background-repeat: repeat-y;
   background-height: 100vh;
-  background-color: black;
+  background-color: linear-gradient(
+    90deg,
+    #97552e 0%,
+    #a2563d 25%,
+    #cc895f 75%,
+    #9d5a2f 100%
+  );
   background-position: top 0% center;
   position: absolute;
   top: 0;

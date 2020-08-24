@@ -12,11 +12,17 @@ const StyledImgBackground = styled(BackgroundImage)`
   width: 100vw;
   min-height: 100vh;
   height: auto;
+  background-color: linear-gradient(
+    90deg,
+    #97552e 0%,
+    #a2563d 25%,
+    #cc895f 75%,
+    #9d5a2f 100%
+  );
 
   background-size: contain;
   background-repeat: repeat-y;
   background-height: 100vh;
-  background-color: black;
   background-position: top 0% center;
   display: grid;
   grid-template-columns: 100vw;
