@@ -42,7 +42,7 @@ const NoiseBG = () => {
         <defs>
           <filter
             id="brushed-steel-filter"
-            // colorInterpolationFilters="sRGB"
+            colorInterpolationFilters="sRGB"
             width="120%"
             height="120%"
           >
@@ -64,6 +64,18 @@ const NoiseBG = () => {
               in="SourceGraphic"
             />
           </filter>
+          <linearGradient
+            id="reflection-grad"
+            gradientUnits="userSpaceOnUse"
+            x1="0"
+            y1="500"
+            x2="500"
+            y2="500"
+          >
+            <stop offset=".2" stopColor="#000" stopOpacity="0.3" />
+            <stop offset=".75" stopColor="#fff" stopOpacity="0.4" />
+            <stop offset="1" stopColor="#000" stopOpacity="0.3" />
+          </linearGradient>
         </defs>
 
         <rect
@@ -73,21 +85,9 @@ const NoiseBG = () => {
           width="100%"
           height="100%"
           fill="var(--bg-texture)"
-          // filter="url(#brushed-steel-filter)"
+          filter="url(#brushed-steel-filter)"
         />
 
-        <linearGradient
-          id="reflection-grad"
-          gradientUnits="userSpaceOnUse"
-          x1="0"
-          y1="500"
-          x2="500"
-          y2="500"
-        >
-          <stop offset=".2" stopColor="#000" stopOpacity="0.5" />
-          <stop offset=".75" stopColor="#fff" stopOpacity="0.3" />
-          <stop offset="1" stopColor="#000" stopOpacity="0.5" />
-        </linearGradient>
         <rect
           className="gradient-overlay"
           width="500"

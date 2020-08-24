@@ -11,9 +11,10 @@ import BGTexture from "../presentational/util/bg-texture"
 export const NavContext = createContext()
 
 const StyledImgBackground = styled(BackgroundImage)`
+  width: 100vw;
   background-size: cover;
   background-height: 100vh;
-  background-position: ;
+  background-position: top 50% center;
 `
 const Layout = ({ children, location }) => {
   const [fromLanding, setFromLanding] = useState(false)
@@ -22,18 +23,26 @@ const Layout = ({ children, location }) => {
     if (location.pathname === "/") setFromLanding(true)
   }, [])
   const { title, description } = useSiteMetadata()
+  const [hasMounted, setHasMounted] = useState(false)
+
+  useEffect(() => {
+    setHasMounted(true)
+  }, [])
+  if (!hasMounted) {
+    return null
+  }
   const { file } = useStaticQuery(graphql`
     query {
       file: allFile(
         filter: {
           sourceInstanceName: { eq: "util-images" }
-          name: { eq: "tablet-bg-texture" }
+          name: { eq: "bg-orange2" }
         }
       ) {
         nodes {
           sharp: childImageSharp {
             fluid {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -62,11 +71,16 @@ const Layout = ({ children, location }) => {
           timeout={{ enter: 1500, exit: 1500 }}
         >
           {status => (
-            <div className={`layout-wrapper page ${status}`}>
-              <BGTexture />
+            <StyledImgBackground
+              fluid={file.nodes[0].sharp.fluid}
+              className={`layout-wrapper page ${status}`}
+            >
+              {/* <div className={`layout-wrapper page ${status}`}> */}
+              {/* <BGTexture /> */}
               {console.log("layout ran")}
               {children}
-            </div>
+              {/* </div> */}
+            </StyledImgBackground>
           )}
         </Transition>
       </TransitionGroup>

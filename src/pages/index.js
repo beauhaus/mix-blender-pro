@@ -19,9 +19,9 @@ export const AppContext = createContext()
 const IndexPage = () => {
   return (
     <IdxWrapper className="index-wrapper">
-      {/* <BGTexture /> */}
-      {/* <LandingLogo />
-      <Landing /> */}
+      <BGTexture />
+      <LandingLogo />
+      <Landing />
     </IdxWrapper>
   )
 }
