@@ -1,4 +1,4 @@
-import React, { memo } from "react"
+import React from "react"
 import styled from "styled-components"
 
 const NoiseBGWrap = styled.div`
@@ -92,4 +92,4 @@ const NoiseBG = () => {
   )
 }
 
-export default memo(NoiseBG)
+export default NoiseBG

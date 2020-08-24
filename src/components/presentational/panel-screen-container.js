@@ -1,4 +1,4 @@
-import React from "react"
+import React, { memo } from "react"
 import styled from "styled-components"
 
 const StyledScrnContainer = styled.div`
@@ -28,4 +28,4 @@ const PanelScrnContainer = () => {
   )
 }
 
-export default PanelScrnContainer
+export default memo(PanelScrnContainer)

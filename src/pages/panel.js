@@ -1,4 +1,4 @@
-import React, { useEffect, useState, createContext } from "react"
+import React, { useEffect, useState, createContext, memo } from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 // import { navigate } from "gatsby"
@@ -49,7 +49,8 @@ const PanelPage = () => {
       }}
     >
       <StyledPanelPage>
-        <BGTexture />
+        {console.log("panelpage ran")}
+        {/* <BGTexture /> */}
         <PanelScrnContainer />
         <BlendCtrlsContainer />
         <ModeArticle />
@@ -74,4 +75,4 @@ const useMdx = () => {
 }
 // const test = useMdx()
 // console.log("arr: ", test)
-export default PanelPage
+export default memo(PanelPage)
