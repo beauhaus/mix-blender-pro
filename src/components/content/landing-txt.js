@@ -7,7 +7,7 @@ import "typeface-seaweed-script"
 const StyledLanding = styled.section`
   width: 100vw;
   height: 71vh;
-  margin: 13vh auto;
+  margin: 0;
   position: relative;
   display: flex;
   justify-content: center;

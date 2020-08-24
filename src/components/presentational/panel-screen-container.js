@@ -1,5 +1,6 @@
 import React, { memo } from "react"
 import styled from "styled-components"
+// import TapModeBtn from "./tapmodebtn";
 
 const StyledScrnContainer = styled.div`
   background: linear-gradient(45deg, #bcbcbc 0%, #8d8d8d 100%);
@@ -23,7 +24,7 @@ const StyledScrnContainer = styled.div`
 const PanelScrnContainer = () => {
   return (
     <StyledScrnContainer className="panel-scrn-container">
-      <h1 className="title">panel</h1>
+      {/* <TapModeBtn /> */}
     </StyledScrnContainer>
   )
 }

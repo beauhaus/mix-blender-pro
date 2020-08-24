@@ -1,28 +1,39 @@
 import React, { useState, useEffect, createContext } from "react"
-import styled from "styled-components"
+import useBGImage from "../components/functional/util/hooks/use-bg-img"
+import Landing from "../components/content/landing-txt"
+import LandingLogo from "../components/presentational/icon-components/landing-logo"
 import "normalize.css"
 import "../styles/index.scss"
+import styled from "@emotion/styled"
+import { graphql, useStaticQuery } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 
-import Landing from "../components/content/landing-txt"
-import BGTexture from "../components/presentational/util/bg-texture"
-import LandingLogo from "../components/presentational/icon-components/landing-logo"
+// import BGTexture from "../components/presentational/util/bg-texture"
 // import PowerBtn from "../components/functional/power-btn"
-const IdxWrapper = styled.div`
+
+const StyledImgBackground = styled(BackgroundImage)`
   width: 100vw;
   min-height: 100vh;
-  height: auto;
-  overflow: hidden;
-  position: relative;
+
+  background-size: contain;
+  background-repeat: repeat-y;
+  background-height: 100vh;
+
+  background-position: top 0% center;
+  position: absolute;
+  top: 0;
+  left: 0;
 `
 export const AppContext = createContext()
 
-const IndexPage = () => {
+const IndexPage = props => {
+  // const { file } = useBgImage()
+  const bgImg = useBGImage()
   return (
-    <IdxWrapper className="index-wrapper">
-      <BGTexture />
+    <StyledImgBackground fluid={bgImg} className="index-wrapper">
       <LandingLogo />
       <Landing />
-    </IdxWrapper>
+    </StyledImgBackground>
   )
 }
 

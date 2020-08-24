@@ -1,18 +1,23 @@
 import React, { useEffect, useState, createContext, memo } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
+import BackgroundImage from "gatsby-background-image"
 import { graphql, useStaticQuery } from "gatsby"
-// import { navigate } from "gatsby"
+import useBGImage from "../components/functional/util/hooks/use-bg-img"
 import BGTexture from "../components/presentational/util/bg-texture"
 import PanelScrnContainer from "../components/presentational/panel-screen-container"
 import BlendCtrlsContainer from "../components/presentational/blend-controls-container"
 import ModeArticle from "../components/content/mode-article"
 
-// import { NavContext } from "../components/functional/layout"
-
-const StyledPanelPage = styled.main`
+const StyledImgBackground = styled(BackgroundImage)`
   width: 100vw;
   min-height: 100vh;
   height: auto;
+
+  background-size: contain;
+  background-repeat: repeat-y;
+  background-height: 100vh;
+
+  background-position: top 0% center;
   display: grid;
   grid-template-columns: 100vw;
   grid-template-rows: 13vh 48vh 3vh 20vh 16vh auto;
@@ -22,6 +27,8 @@ export const ModeContext = createContext()
 
 const PanelPage = () => {
   const mixModesArray = useMdx()
+  const bgImg = useBGImage()
+
   const [modesArray, setModesArray] = useState(mixModesArray)
   const [mixModeNum, setMixModeNum] = useState(0)
   const [mixMode, setMixMode] = useState("normal")
@@ -32,6 +39,7 @@ const PanelPage = () => {
 
   // secures proper rehydration
   const [hasMounted, setHasMounted] = useState(false)
+
   useEffect(() => {
     setHasMounted(true)
   }, [])
@@ -48,13 +56,13 @@ const PanelPage = () => {
         modesArray,
       }}
     >
-      <StyledPanelPage>
+      <StyledImgBackground fluid={bgImg} className="index-wrapper">
         {console.log("panelpage ran")}
         {/* <BGTexture /> */}
         <PanelScrnContainer />
         <BlendCtrlsContainer />
         <ModeArticle />
-      </StyledPanelPage>
+      </StyledImgBackground>
     </ModeContext.Provider>
   )
 }
@@ -73,6 +81,5 @@ const useMdx = () => {
   const mixModesArray = data.allMdx.nodes.map(item => item.frontmatter.title)
   return mixModesArray
 }
-// const test = useMdx()
-// console.log("arr: ", test)
+
 export default memo(PanelPage)
