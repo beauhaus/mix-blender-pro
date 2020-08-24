@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import styled from "styled-components"
 import "typeface-gruppo"
 import "typeface-special-elite"
@@ -68,8 +68,15 @@ const ModeArticle = props => {
   // const { mixMode } = useContext(AppContext)
   // const modes = useModes()
 
-  // const [thisMode] = modes.filter(mode => mode.title === mixMode)
-  // console.log("TM: ", thisMode)
+  // secures proper rehydration
+  const [hasMounted, setHasMounted] = useState(false)
+
+  useEffect(() => {
+    setHasMounted(true)
+  }, [])
+  if (!hasMounted) {
+    return null
+  }
   return (
     // <StyledModeArticle id={`${mixMode}-article`} className="mode-article">
     <StyledModeArticle id={`mixmode-article`} className="mode-article">
