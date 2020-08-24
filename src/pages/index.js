@@ -33,16 +33,8 @@ const StyledImgBackground = styled(BackgroundImage)`
 export const AppContext = createContext()
 
 const IndexPage = props => {
-  // const { file } = useBgImage()
   const bgImg = useBGImage()
-  // const [hasMounted, setHasMounted] = useState(false)
 
-  // useEffect(() => {
-  //   setHasMounted(true)
-  // }, [])
-  // if (!hasMounted) {
-  //   return null
-  // }
   return (
     <StyledImgBackground fluid={bgImg} className="index-wrapper">
       <LandingLogo />

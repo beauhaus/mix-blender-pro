@@ -44,14 +44,14 @@ const PanelPage = () => {
   }, [mixModeNum])
 
   // secures proper rehydration
-  // const [hasMounted, setHasMounted] = useState(false)
+  const [hasMounted, setHasMounted] = useState(false)
 
-  // useEffect(() => {
-  //   setHasMounted(true)
-  // }, [])
-  // if (!hasMounted) {
-  //   return null
-  // }
+  useEffect(() => {
+    setHasMounted(true)
+  }, [])
+  if (!hasMounted) {
+    return null
+  }
 
   return (
     <ModeContext.Provider

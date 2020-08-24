@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 // import FlipArrows from "../functional/flip-arrows"
 // import FlipBtn from "../functional/flip-btn"
@@ -86,6 +86,14 @@ const StyledArrows = styled.g`
 `
 
 const FlipBtnContainer = () => {
+  const [hasMounted, setHasMounted] = useState(false)
+
+  useEffect(() => {
+    setHasMounted(true)
+  }, [])
+  if (!hasMounted) {
+    return null
+  }
   return (
     <StyledFlipBtnContainer>
       {/* <FlipBtn /> */}
