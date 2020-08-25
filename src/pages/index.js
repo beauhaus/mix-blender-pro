@@ -5,11 +5,7 @@ import LandingLogo from "../components/presentational/icon-components/landing-lo
 import "normalize.css"
 import "../styles/index.scss"
 import styled from "@emotion/styled"
-import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
-
-// import BGTexture from "../components/presentational/util/bg-texture"
-// import PowerBtn from "../components/functional/power-btn"
 
 const StyledImgBackground = styled(BackgroundImage)`
   width: 100vw;
@@ -18,11 +14,11 @@ const StyledImgBackground = styled(BackgroundImage)`
   background-repeat: no-repeat;
   background-height: 100vh;
   background-color: linear-gradient(
-    90deg,
-    #97552e 0%,
-    #a2563d 25%,
-    #cc895f 75%,
-    #9d5a2f 100%
+    270deg,
+    #000 0%,
+    #000 25%,
+    #000 75%,
+    #000 100%
   );
   background-position: top center;
   position: absolute;
@@ -31,10 +27,6 @@ const StyledImgBackground = styled(BackgroundImage)`
   display: grid;
   grid-template-columns: 50vw 50vw;
   grid-template-rows: 13vh 70vh 17vh;
-  svg {
-    grid-column: 1;
-    grid-row: 2;
-  }
   section {
     grid-column: 1;
     grid-row: 2;

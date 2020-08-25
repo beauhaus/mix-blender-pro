@@ -2,19 +2,19 @@ import React, { useContext, useEffect, useState } from "react"
 import styled from "styled-components"
 import "typeface-gruppo"
 import "typeface-special-elite"
+import ArticleBG from "../presentational/util/bg-article-texture"
 
 // import { AppContext } from "../pages/application";
 // import { animateScroll } from "react-scroll";
 // import useModes from "./hooks/use-modes";
 
-import ArticleBG from "../presentational/util/bg-article-texture"
 const StyledModeArticle = styled.article`
   grid-row: 6;
   min-height: 100vh;
   height: auto;
   width: 100vw;
-  display: grid;
   background: transparent;
+  display: grid;
   grid-template-columns: 10vw 1fr 10vw;
   grid-template-rows: 70vh 10vh;
   position: relative;
@@ -31,8 +31,6 @@ const StyledModeArticle = styled.article`
     }
     p {
       font-family: "Open Sans", sans-serif;
-      ${"" /* font-family: "Special Elite"; */}
-      ${"" /* font-weight: lighter; */}
       font-weight: 100;
       margin: 1vh auto;
       font-size: 2rem;

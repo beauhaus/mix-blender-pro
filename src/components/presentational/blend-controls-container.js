@@ -16,7 +16,7 @@ const StyledBlendControls = styled.div`
 const BlendControls = () => {
   return (
     <StyledBlendControls className="blend-controls">
-      {console.log("blendCtrls ran")}
+      {/* {console.log("blendCtrls ran")} */}
       <FlipBtnContainer />
       <CycleBtnContainer />
     </StyledBlendControls>

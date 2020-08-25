@@ -63,8 +63,6 @@ const PanelPage = () => {
       }}
     >
       <StyledImgBackground fluid={bgImg} className="index-wrapper">
-        {console.log("panelpage ran")}
-        {/* <BGTexture /> */}
         <PanelScrnContainer />
         <BlendCtrlsContainer />
         <ModeArticle />

@@ -2,15 +2,19 @@ import React from "react"
 import styled from "styled-components"
 
 const LandingLogoWrapper = styled.svg`
-  position: absolute;
-  width: 115%;
-  left: -50%;
+  width: 100%;
+  height: 100%;
+  grid-column: 1;
+  grid-row: 2;
+
   .landing-icon-swirl {
-    mix-blend-mode: lighten;
+    mix-blend-mode: screen;
   }
-  .landing-icon-face {
-    mix-blend-mode: hard-light;
-    ${"" /* display: none; */}
+  #landing-blender-body {
+    mix-blend-mode: overlay;
+    fill: #54fff5;
+    fill-opacity: 1;
+    stroke-width: 0;
   }
   .st3 {
     fill: none;
@@ -55,7 +59,7 @@ const LandingLogo = () => (
   <LandingLogoWrapper
     xmlns="http://www.w3.org/2fff/svg"
     className="landing-logo"
-    viewBox="0 0 350 350"
+    viewBox="150 120 150 150"
   >
     <filter id="swirl-blur">
       <feGaussianBlur stdDeviation="4"></feGaussianBlur>
@@ -100,9 +104,7 @@ const LandingLogo = () => (
     />
     <g className="landing-icon-face">
       <path
-        id="faceback_22_"
-        fill="#f5bc61"
-        fillOpacity="0.8"
+        id="landing-blender-body"
         stroke="#fff"
         strokeWidth="1"
         d="M260.03 296.54l-133.41 22.57c-6.59-37.15-7.38-72.97.44-106.81l97.41-16.48c20.35 31.44 31.85 65.11 35.56 100.72z"
