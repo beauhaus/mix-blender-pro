@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import "typeface-nanum-pen-script"
 import "typeface-warnes"
@@ -63,6 +63,14 @@ const StyledLanding = styled.section`
 `
 
 const Landing = () => {
+  const [hasMounted, setHasMounted] = useState(false)
+
+  useEffect(() => {
+    setHasMounted(true)
+  }, [])
+  if (!hasMounted) {
+    return null
+  }
   return (
     <StyledLanding className="landing-text">
       <h2>
