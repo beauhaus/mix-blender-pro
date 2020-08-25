@@ -20,10 +20,10 @@ const StyledImgBackground = styled(BackgroundImage)`
     #9d5a2f 100%
   );
 
-  background-size: contain;
-  background-repeat: repeat-y;
-  background-height: 100vh;
-  background-position: top 0% center;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  background-height: 100%;
+  background-position: top center;
   display: grid;
   grid-template-columns: 100vw;
   grid-template-rows: 13vh 48vh 3vh 20vh 16vh auto;

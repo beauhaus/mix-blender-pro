@@ -14,9 +14,8 @@ import BackgroundImage from "gatsby-background-image"
 const StyledImgBackground = styled(BackgroundImage)`
   width: 100vw;
   min-height: 100vh;
-
-  background-size: contain;
-  background-repeat: repeat-y;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
   background-height: 100vh;
   background-color: linear-gradient(
     90deg,
@@ -25,10 +24,21 @@ const StyledImgBackground = styled(BackgroundImage)`
     #cc895f 75%,
     #9d5a2f 100%
   );
-  background-position: top 0% center;
+  background-position: top center;
   position: absolute;
   top: 0;
   left: 0;
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+  grid-template-rows: 13vh 70vh 17vh;
+  svg {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  section {
+    grid-column: 1;
+    grid-row: 2;
+  }
 `
 export const AppContext = createContext()
 
